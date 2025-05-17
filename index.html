@@ -1,53 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ruchitha | DevOps & Linux Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruchitha | Linux Admin & DevOps Portfolio</title>
   <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    .project {
-      background: #fff;
-      border-radius: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #f0f0f5;
+      margin: 0;
       padding: 20px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding-bottom: 30px;
+      border-bottom: 3px solid #f0a500;
+    }
+    header h1 {
+      margin-bottom: 5px;
+      font-size: 3em;
+      color: #ffd369;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    header p {
+      font-size: 1.3em;
+      font-weight: 600;
+      color: #fff5c3;
+      letter-spacing: 1.2px;
+    }
+    section {
+      margin-top: 40px;
+    }
+    h2 {
+      color: #ffd369;
+      border-bottom: 3px solid #f0a500;
+      padding-bottom: 8px;
       margin-bottom: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .card {
+      background: #2c2f48cc;
+      border-radius: 12px;
+      padding: 22px 28px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgb(240 165 0 / 0.7);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #f0a500;
+    }
+    .card p {
+      line-height: 1.5;
+      font-size: 1.05em;
+      color: #fff5c3;
+    }
+    ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+      color: #f0f0f5cc;
+      font-weight: 500;
+    }
+    ul li {
+      margin-bottom: 6px;
     }
     a {
-      color: #3498db;
+      color: #ffd369;
       text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
     }
     a:hover {
+      color: #f0a500;
       text-decoration: underline;
     }
     footer {
-      margin-top: 40px;
+      text-align: center;
       font-size: 0.9em;
-      color: #777;
+      color: #fff5c3aa;
+      margin-top: 50px;
+      padding-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>👩‍💻 Ruchitha | DevOps & Linux Portfolio</h1>
-  <p>Welcome! I specialize in Linux administration and DevOps automation. Here are some of my projects:</p>
 
-  <div class="project">
-    <h2>🚀 LAMP Stack Auto Deployment (CentOS 9)</h2>
-    <p>This Bash script automates the installation and configuration of a full LAMP stack (Apache, MariaDB, PHP) on CentOS 9. It includes service setup, root password protection, test database/user creation, and PHP test deployment.</p>
-    <p><strong>Technologies:</strong> Bash, Apache, MariaDB, PHP, CentOS 9</p>
-    <p><a href="https://github.com/Ruchitha829/linux-projects" target="_blank">🔗 View Project on GitHub</a></p>
-  </div>
+  <header>
+    <h1>Ruchitha</h1>
+    <p>Linux Admin | AWS | DevOps Engineer | SRE Aspirant</p>
+  </header>
+
+  <section class="summary">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I am a motivated IT professional with experience as an Associate Cloud Engineer at Onpassive, where I monitored servers and performed basic application deployments. I have completed comprehensive courses on AWS and Linux from Udemy and have practical skills in Linux administration, SQL, Python, AWS services, and popular DevOps tools such as Docker, Kubernetes, and Jenkins CI/CD pipelines.
+      </p>
+      <p>
+        I am actively seeking opportunities as a Junior Linux Administrator, AWS Engineer, DevOps Engineer, or Site Reliability Engineer (SRE).
+      </p>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Operating Systems:</strong> Linux (CentOS, Ubuntu), Windows</li>
+        <li><strong>Cloud & DevOps:</strong> AWS (EC2, S3, IAM), Docker, Kubernetes, Jenkins CI/CD pipelines</li>
+        <li><strong>Programming & Scripting:</strong> Bash scripting, Python, SQL</li>
+        <li><strong>Tools & Technologies:</strong> MariaDB/MySQL, Apache, Git, Ansible (learning)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="certifications">
+    <h2>Certifications & Courses</h2>
+    <div class="card">
+      <ul>
+        <li>Linux Administration Course - Udemy</li>
+        <li>AWS Certified Cloud Practitioner (In Progress / Completed)</li>
+        <li>Various DevOps tools and pipeline courses on Udemy</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="experience">
+    <h2>Work Experience</h2>
+    <div class="card">
+      <h3>Associate Cloud Engineer - Onpassive</h3>
+      <p><em>July 2023 – March 2025</em></p>
+      <ul>
+        <li>Monitored servers for performance, uptime, and resource usage.</li>
+        <li>Performed basic application deployments and troubleshooting.</li>
+        <li>Maintained system health and supported cloud infrastructure operations.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <h3>🚀 LAMP Stack Auto Deployment (CentOS 9)</h3>
+      <p>Bash script automates the full installation and configuration of a LAMP stack (Linux, Apache, MariaDB, PHP) including service startup, securing MariaDB, and deploying a PHP test page.</p>
+      <p><a href="https://github.com/Ruchitha829/linux-projects/tree/main/LAMP-Auto-Deploy" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+    </div>
+
+    <div class="card">
+      <h3>🖥️ System Monitor</h3>
+      <p>A Bash-based tool to monitor system resources like CPU, memory, and disk usage and generate reports.</p>
+      <p><a href="https://github.com/Ruchitha829/linux-projects/tree/main/system-monitor" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+    </div>
+
+    <div class="card">
+      <h3>👥 User Process Tracker</h3>
+      <p>Monitors currently logged-in users and their running processes with real-time statistics using Bash scripting.</p>
+      <p><a href="https://github.com/Ruchitha829/linux-projects/tree/main/user-process-tracker" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+    </div>
+
+  </section>
 
   <footer>
     © 2025 Ruchitha | Built with 💻 and ☕
   </footer>
+
 </body>
 </html>

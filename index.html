@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruchitha Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruchitha | DevOps Portfolio</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(-45deg, #f0f8ff, #e6f7ff, #d0eaff, #f5faff);
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
       background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-      color: #333;
+      animation: gradientBG 15s ease infinite;
     }
 
-    @keyframes gradient {
+    @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
@@ -23,41 +25,45 @@
     .container {
       display: flex;
       flex-wrap: wrap;
-      padding: 2rem;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .left-column, .right-column {
       flex: 1;
       min-width: 300px;
-      padding: 1rem;
+      padding: 20px;
     }
 
-    .left-column {
-      background-color: #ffffffc9;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #fdd835;
     }
 
-    .right-column {
-      background-color: #ffffffd9;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    h2 {
+      border-bottom: 2px solid #fdd835;
+      padding-bottom: 5px;
+      margin-top: 30px;
+      color: #fdd835;
     }
 
-    h1, h2 {
-      color: #004085;
+    ul, p {
+      line-height: 1.6;
+      margin: 10px 0;
     }
 
-    ul {
-      padding-left: 1.2rem;
+    .contact p, .contact a {
+      margin: 5px 0;
+      color: #ffffff;
+      text-decoration: none;
     }
 
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    .section {
-      margin-bottom: 2rem;
+    .highlight {
+      font-weight: 700;
+      color: #ffeb3b;
     }
   </style>
 </head>
@@ -65,73 +71,54 @@
   <div class="container">
     <div class="left-column">
       <h1>Ruchitha</h1>
-      <p><strong>Email:</strong> ruchithakatakm99@gmail.com</p>
-      <p><strong>Phone:</strong> +91 6303476240 / +91 8340894285</p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank">linkedin.com/in/ruchitha-r-423409274</a></p>
-
-      <div class="section">
-        <h2>Strengths</h2>
-        <ul>
-          <li>Good communication and interpersonal skills</li>
-          <li>Ability to learn new technologies</li>
-          <li>Quick adaptability to different work environments</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h2>Personal Details</h2>
-        <ul>
-          <li><strong>Date of Birth:</strong> 10-09-1999</li>
-          <li><strong>Languages Known:</strong> English, Hindi, Telugu</li>
-          <li><strong>Address:</strong> H No: -7-13A/3, Hanuman Nagar, Chandur, Hyderabad, Telangana - 508255</li>
-        </ul>
+      <div class="contact">
+        <p><strong>Email:</strong> <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
+        <p><strong>Mobile:</strong> +91 6303476240 / +91 8340894285</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank">linkedin.com/in/ruchitha-r-423409274</a></p>
       </div>
     </div>
 
     <div class="right-column">
-      <div class="section">
-        <h2>Career Objective</h2>
-        <p>Aspiring DevOps/Site Reliability Engineer (SRE) with hands-on experience in cloud infrastructure management, server monitoring, and CI/CD pipeline deployments. Proficient in AWS, Linux, Shell Scripting, and Python, with a strong foundation in infrastructure automation and cloud-native tooling. Passionate about SRE principles and contributing to high-performance teams.</p>
-      </div>
+      <h2>Career Objective</h2>
+      <p>DevOps/Site Reliability Engineer (SRE) with hands-on experience in cloud infrastructure, server monitoring, and CI/CD automation. Proficient in AWS, Linux, Shell Scripting, and Python. Passionate about SRE principles, observability, and automation to drive reliability and efficiency.</p>
 
-      <div class="section">
-        <h2>Work Experience</h2>
-        <p><strong>Company:</strong> OnPassive Private Limited</p>
-        <p><strong>Role:</strong> Associate Cloud Engineer</p>
-        <p><strong>Duration:</strong> July 2023 to March 2025</p>
-        <ul>
-          <li>Designed and maintained CI/CD pipelines using Jenkins, Git, and GitHub Actions.</li>
-          <li>Monitored applications using CloudWatch, Nagios, and Prometheus with proactive alerting.</li>
-          <li>Managed AWS infrastructure (EC2, S3, IAM, VPC, CloudFormation).</li>
-          <li>Automated server tasks using Shell Scripting and Python.</li>
-          <li>Implemented IaC using Terraform and Ansible.</li>
-          <li>Collaborated with development teams on DevOps integration and agile support.</li>
-          <li>Handled incident response and reduced MTTR through root cause analysis.</li>
-          <li>Maintained detailed documentation for procedures and monitoring.</li>
-        </ul>
-      </div>
+      <h2>Experience</h2>
+      <p><span class="highlight">Company:</span> OnPassive Private Limited<br>
+         <span class="highlight">Role:</span> Associate Cloud Engineer<br>
+         <span class="highlight">Duration:</span> July 2023 – March 2025</p>
+      <ul>
+        <li>Managed CI/CD pipelines using Jenkins, GitHub Actions.</li>
+        <li>Monitored systems via CloudWatch, Nagios, Prometheus.</li>
+        <li>Handled AWS resources (EC2, S3, IAM, VPC, CloudFormation).</li>
+        <li>Automated processes with Shell Scripts and Python.</li>
+        <li>Used Terraform and Ansible for Infrastructure as Code.</li>
+        <li>Collaborated with dev teams, supported Agile SDLC.</li>
+        <li>On-call rotations, incident response, root cause analysis.</li>
+      </ul>
 
-      <div class="section">
-        <h2>Technical Skills</h2>
-        <ul>
-          <li><strong>Cloud Services:</strong> EC2, ELB, SNS, CloudFormation, Auto Scaling, CloudFront, S3, Elastic Beanstalk</li>
-          <li><strong>DevOps Tools:</strong> Docker, Jenkins, Kubernetes, Ansible</li>
-          <li><strong>Version Control:</strong> Git, GitHub, GitLab, Bitbucket</li>
-          <li><strong>Programming:</strong> Python, C, Java, JavaScript</li>
-          <li><strong>Build & CI:</strong> Maven, Jenkins</li>
-          <li><strong>OS:</strong> Windows, Linux</li>
-          <li><strong>Office Tools:</strong> Outlook, Word, Excel, PowerPoint</li>
-        </ul>
-      </div>
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Cloud:</strong> AWS (EC2, S3, ELB, SNS, CloudFront, CloudFormation)</li>
+        <li><strong>DevOps Tools:</strong> Docker, Jenkins, Kubernetes, Ansible</li>
+        <li><strong>VCS:</strong> Git, GitHub, GitLab, Bitbucket</li>
+        <li><strong>Languages:</strong> Python, Java, JavaScript, C</li>
+        <li><strong>OS:</strong> Linux, Windows</li>
+        <li><strong>CI/CD:</strong> Jenkins, GitHub Actions</li>
+      </ul>
 
-      <div class="section">
-        <h2>Education</h2>
-        <ul>
-          <li>B.Tech in EEE from Swami Ramananda Teertha Institute of Science and Technology, 8.4 CGPA (July 2021)</li>
-          <li>Intermediate from Gowthami Junior College, 97.2% (May 2017)</li>
-          <li>S.S.C from Krishnaveni Talent School, 9.8 CGPA (May 2015)</li>
-        </ul>
-      </div>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech EEE</strong> - Swami Ramananda Teertha Institute (8.4 CGPA, 2021)</li>
+        <li><strong>Intermediate</strong> - Gowthami Junior College (97.2%, 2017)</li>
+        <li><strong>SSC</strong> - Krishnaveni Talent School (9.8 CGPA, 2015)</li>
+      </ul>
+
+      <h2>Strengths</h2>
+      <ul>
+        <li>Quick learner with adaptability to new technologies</li>
+        <li>Strong communication and team collaboration</li>
+        <li>Effective problem-solving skills</li>
+      </ul>
     </div>
   </div>
 </body>

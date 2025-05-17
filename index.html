@@ -1,168 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ruchitha's DevOps Portfolio</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f7f9;
-      color: #333;
-    }
-    header {
-      background-color: #2d89ef;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-      font-weight: 400;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      border-bottom: 3px solid #2d89ef;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      color: #2d89ef;
-    }
-    ul.skills-list {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-    }
-    ul.skills-list li {
-      background-color: #2d89ef;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-    .project {
-      margin-bottom: 1.5rem;
-      background: white;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 6px rgb(0 0 0 / 0.1);
-    }
-    .project h3 {
-      margin-top: 0;
-      color: #1a4d9c;
-    }
-    .project p {
-      margin: 0.4rem 0 0;
-      line-height: 1.4;
-    }
-    footer {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      background-color: #2d89ef;
-      color: white;
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: #ffec99;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 600px) {
-      ul.skills-list {
-        flex-direction: column;
-        gap: 0.4rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ruchitha's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: #004080;
+            display: flex;
+            justify-content: center;
+            padding: 0.75rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+            color: #004080;
+        }
+
+        ul.skills-list {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        ul.skills-list li {
+            background-color: #0066cc;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project {
+            background-color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: #004080;
+        }
+
+        .project p {
+            margin: 0.4rem 0 0;
+            line-height: 1.4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background-color: #0066cc;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffec99;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            ul.skills-list {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>Ruchitha</h1>
-    <p>DevOps Engineer | AWS | Terraform | CI/CD | Automation</p>
-  </header>
+    <header>
+        <h1>Ruchitha</h1>
+        <p>DevOps Engineer | AWS | Terraform | CI/CD | Automation</p>
+    </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        DevOps Engineer passionate about automating infrastructure and streamlining deployment workflows. Experienced in AWS, Terraform, Jenkins, Ansible, Docker, and Linux system administration. Skilled in building scalable, secure, and cost-effective cloud environments with a strong focus on Infrastructure as Code and CI/CD pipelines. Actively seeking opportunities in India to contribute and grow in dynamic tech teams.
-      </p>
-    </section>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>AWS (EC2, S3, IAM, CloudFormation)</li>
-        <li>Terraform</li>
-        <li>Ansible</li>
-        <li>Jenkins</li>
-        <li>GitLab CI/CD</li>
-        <li>Docker</li>
-        <li>Kubernetes (basic)</li>
-        <li>Bash Scripting</li>
-        <li>Python</li>
-        <li>Prometheus</li>
-        <li>Grafana</li>
-        <li>ELK Stack</li>
-        <li>Git & GitHub</li>
-        <li>Linux (CentOS, Ubuntu)</li>
-      </ul>
-    </section>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                DevOps Engineer passionate about automating infrastructure and streamlining deployment workflows.
+                Experienced in AWS, Terraform, Jenkins, Ansible, Docker, and Linux system administration. Skilled in
+                building scalable, secure, and cost-effective cloud environments with a strong focus on Infrastructure as
+                Code and CI/CD pipelines. Actively seeking opportunities in India to contribute and grow in dynamic tech
+                teams.
+            </p>
+        </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>AWS (EC2, S3, IAM, CloudFormation)</li>
+                <li>Terraform</li>
+                <li>Ansible</li>
+                <li>Jenkins</li>
+                <li>GitLab CI/CD</li>
+                <li>Docker</li>
+                <li>Kubernetes (basic)</li>
+                <li>Bash Scripting</li>
+                <li>Python</li>
+                <li>Prometheus</li>
+                <li>Grafana</li>
+                <li>ELK Stack</li>
+                <li>Git & GitHub</li>
+                <li>Linux (CentOS, Ubuntu)</li>
+            </ul>
+        </section>
 
-      <div class="project">
-        <h3>AWS Infrastructure Automation</h3>
-        <p>Automated provisioning and management of AWS resources using Terraform and Ansible, reducing manual configuration time by 50%. Implemented secure IAM policies and automated backups using AWS Lambda functions.</p>
-      </div>
+        <section id="projects">
+            <h2>Projects</h2>
 
-      <div class="project">
-        <h3>CI/CD Pipeline Setup with Jenkins</h3>
-        <p>Designed and implemented automated build and deployment pipelines using Jenkins for containerized microservices, improving deployment speed and reliability.</p>
-      </div>
+            <div class="project">
+                <h3>AWS Infrastructure Automation</h3>
+                <p>
+                    Automated provisioning and management of AWS resources using Terraform and Ansible, reducing manual
+                    configuration time by 50%. Implemented secure IAM policies and automated backups using AWS Lambda
+                    functions.
+                </p>
+            </div>
 
-      <div class="project">
-        <h3>Docker-Based Application Deployment</h3>
-        <p>Containerized legacy applications using Docker, simplifying deployment and scaling processes on cloud environments.</p>
-      </div>
+            <div class="project">
+                <h3>CI/CD Pipeline Setup with Jenkins</h3>
+                <p>
+                    Designed and implemented automated build and deployment pipelines using Jenkins for containerized
+                    microservices, improving deployment speed and reliability.
+                </p>
+            </div>
 
-      <div class="project">
-        <h3>Linux System Monitoring Tool</h3>
-        <p>Developed a Bash script-based system resource monitor that tracks CPU, memory, disk, and network usage, integrated with alert notifications.</p>
-      </div>
-    </section>
+            <div class="project">
+                <h3>Docker-Based Application Deployment</h3>
+                <p>
+                    Containerized legacy applications using Docker, simplifying deployment and scaling processes on cloud
+                    environments.
+                </p>
+            </div>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:ruchithakatakam99@gmail.com">ruchithakatakam99@gmail.com</a></p>
-      <p>Phone: +91-8340894285</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank" rel="noopener">linkedin.com/in/ruchitha-r-423409274</a></p>
-      <p>GitHub: <a href="https://github.com/ruchitha829" target="_blank" rel="noopener">github.com/ruchitha829</a></p>
-    </section>
-  </main>
+            <div class="project">
+                <h3>Linux System Monitoring Tool</h3>
+                <p>
+                    Developed a Bash script-based system resource monitor that tracks CPU, memory, disk, and network usage,
+                    integrated with alert notifications.
+                </p>
+            </div>
+        </section>
 
-  <footer>
-    <p>© 2025 Ruchitha | Designed for DevOps & Cloud Career Growth</p>
-  </footer>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:ruchithakatakam99@gmail.com">ruchithakatakam99@gmail.com</a></p>
+            <p>Phone: +91-8340894285</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank" rel="noopener">linkedin.com/in/ruchitha-r-423409274</a></p>
+            <p>GitHub: <a href="https://github.com/ruchitha829" target="_blank" rel="noopener">github.com/ruchitha829</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Ruchitha | Designed for DevOps & Cloud Career Growth</p>
+    </footer>
 </body>
+
 </html>

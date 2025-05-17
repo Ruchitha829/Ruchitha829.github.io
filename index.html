@@ -8,9 +8,9 @@
   body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(-45deg, #dbeafe, #e0f7fa, #e3f2fd, #f1f8e9);
+    background: linear-gradient(-45deg, #bbdefb, #e3f2fd, #b2ebf2, #e0f7fa);
     background-size: 400% 400%;
-    animation: gradientBG 18s ease infinite;
+    animation: gradientBG 15s ease infinite;
     color: #102027;
     min-height: 100vh;
   }
@@ -29,7 +29,7 @@
   }
 
   .left, .right {
-    background: #ffffffd9;
+    background: #ffffffee;
     border-radius: 14px;
     padding: 30px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
@@ -41,9 +41,9 @@
   .left h1 {
     margin: 0 0 20px 0;
     font-size: 38px;
-    color: #0077b6;
+    color: #01579b;
     letter-spacing: 1.2px;
-    border-bottom: 2px solid #0077b6;
+    border-bottom: 2px solid #0288d1;
     padding-bottom: 10px;
   }
 
@@ -55,24 +55,24 @@
   .contact-info a {
     text-decoration: none;
     font-weight: 600;
-    color: #0077b6;
+    color: #0288d1;
   }
   .contact-info a:hover {
     text-decoration: underline;
   }
 
   h2 {
-    border-bottom: 2px solid #0077b6;
+    border-bottom: 2px solid #0288d1;
     padding-bottom: 6px;
     margin-bottom: 16px;
     font-size: 22px;
-    color: #0077b6;
+    color: #0288d1;
   }
 
   ul {
     margin: 0;
     padding-left: 20px;
-    list-style-type: square;
+    list-style-type: disc;
     color: #263238;
   }
   ul li {
@@ -94,13 +94,13 @@
   }
   .progress-container {
     width: 100%;
-    background-color: #e0e0e0;
+    background-color: #cfd8dc;
     border-radius: 10px;
     overflow: hidden;
   }
   .progress {
     height: 14px;
-    background-color: #0077b6;
+    background-color: #0288d1;
     width: 0;
     border-radius: 10px;
     transition: width 2s ease;
@@ -131,10 +131,10 @@
     <section>
       <h2>Projects</h2>
       <ul>
-        <li><strong>LAMP Auto Deploy:</strong> Automated setup of Apache, MySQL, and PHP using Ansible and shell scripting for rapid deployment.</li>
-        <li><strong>System Resource Monitor:</strong> Created Bash-based tool to monitor CPU/memory usage and alert via Slack/email.</li>
-        <li><strong>User Process Tracker:</strong> Logged and audited login sessions and user activity for system compliance.</li>
-        <li><strong>AWS DevOps Infra:</strong> Built Terraform-based infra for microservices with GitHub Actions CI/CD, Docker, and EC2 autoscaling.</li>
+        <li><strong>LAMP Auto Deploy</strong><br/>- Automated Apache, MySQL, PHP setup using Ansible and Shell scripts.<br/>- Enabled quick and consistent server provisioning across environments.<br/>- Configured firewall, virtual host, and service validations.</li>
+        <li><strong>System Resource Monitor</strong><br/>- Developed a lightweight Bash tool for real-time CPU and memory tracking.<br/>- Integrated Slack and email notifications for critical alerts.<br/>- Scheduled via crontab for automated health reporting.</li>
+        <li><strong>User Process Tracker</strong><br/>- Monitored and logged user login activities and background processes.<br/>- Improved system compliance and accountability for user actions.<br/>- Produced audit logs and alerts for anomalies.</li>
+        <li><strong>AWS DevOps Infra</strong><br/>- Provisioned complete infra using Terraform and deployed apps via CI/CD.<br/>- Leveraged GitHub Actions, Docker, and EC2 autoscaling.<br/>- Implemented centralized logging and security rules.</li>
       </ul>
     </section>
   </div>
@@ -146,52 +146,4 @@
       <div class="skill"><div class="skill-name">CI/CD (Jenkins, GitHub Actions)</div><div class="progress-container"><div class="progress" style="width: 80%;"></div></div></div>
       <div class="skill"><div class="skill-name">Terraform & Ansible</div><div class="progress-container"><div class="progress" style="width: 75%;"></div></div></div>
       <div class="skill"><div class="skill-name">Docker & Kubernetes</div><div class="progress-container"><div class="progress" style="width: 70%;"></div></div></div>
-      <div class="skill"><div class="skill-name">Python & Bash</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
-    </section>
-
-    <section>
-      <h2>Work Experience</h2>
-      <p><strong>OnPassive Pvt Ltd</strong> — Associate Cloud Engineer<br/><em>Jul 2023 – Mar 2025</em></p>
-      <ul>
-        <li>Designed automated CI/CD pipelines and monitored deployments with Prometheus and CloudWatch.</li>
-        <li>Worked on infrastructure provisioning using Terraform, Ansible, and AWS services.</li>
-        <li>Streamlined development workflows and improved delivery speed by 40%.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>AWS Certified Solutions Architect – Associate</li>
-        <li>Linux Foundation Certified System Administrator (LFCS)</li>
-        <li>Docker Certified Associate (DCA)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Interests</h2>
-      <ul>
-        <li>Cloud Automation & Scripting</li>
-        <li>Containerization & DevOps Tooling</li>
-        <li>Monitoring & Observability</li>
-        <li>Open-source Contributions</li>
-        <li>Infrastructure as Code (IaC)</li>
-      </ul>
-    </section>
-  </div>
-</div>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const progressBars = document.querySelectorAll('.progress');
-    progressBars.forEach(bar => {
-      const width = bar.style.width;
-      bar.style.width = '0%';
-      setTimeout(() => {
-        bar.style.width = width;
-      }, 200);
-    });
-  });
-</script>
-</body>
-</html>
+      <div class="skill"><div class="skill-name">Python & Bash</div><div class="progress-container"><div class="progress" style="width: 85%;">

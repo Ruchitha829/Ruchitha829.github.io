@@ -8,12 +8,11 @@
   body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(-45deg, #d7f9f3, #fdf6e3, #e0f7fa, #f1f8e9);
+    background: linear-gradient(-45deg, #e0f7fa, #ffe0b2, #e1bee7, #dcedc8);
     background-size: 400% 400%;
     animation: gradientBG 20s ease infinite;
-    color: #263238;
+    color: #212121;
     min-height: 100vh;
-    position: relative;
     overflow-x: hidden;
   }
 
@@ -23,20 +22,9 @@
     100% {background-position:0% 50%;}
   }
 
-  .floating {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.1;
-    animation: float 12s ease-in-out infinite;
-  }
-
-  .circle1 { width: 140px; height: 140px; background: #4fc3f7; top: 10%; left: 5%; animation-delay: 0s; }
-  .circle2 { width: 100px; height: 100px; background: #ffee58; top: 40%; left: 90%; animation-delay: 4s; }
-  .circle3 { width: 120px; height: 120px; background: #4dd0e1; top: 75%; left: 3%; animation-delay: 2s; }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
+  .dark-mode {
+    background: linear-gradient(-45deg, #263238, #37474f, #455a64, #1c313a);
+    color: #fafafa;
   }
 
   .container {
@@ -50,7 +38,7 @@
   }
 
   .left, .right {
-    background: #ffffffdd;
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 14px;
     padding: 30px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
@@ -59,63 +47,56 @@
     flex-direction: column;
   }
 
-  .left h1 {
-    margin: 0 0 20px 0;
+  .dark-mode .left, .dark-mode .right {
+    background: rgba(33, 33, 33, 0.95);
+    color: #f5f5f5;
+  }
+
+  h1 {
     font-size: 38px;
-    color: #0d47a1;
-    letter-spacing: 1.2px;
-    border-bottom: 2px solid #42a5f5;
+    color: #004d40;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00796b;
     padding-bottom: 10px;
   }
 
+  h2 {
+    color: #00695c;
+    border-bottom: 2px solid #004d40;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+
+  ul li {
+    margin-bottom: 8px;
+  }
+
   .contact-info p, .contact-info a {
-    font-size: 15px;
+    font-size: 14px;
     margin: 6px 0;
     color: #37474f;
   }
 
   .contact-info a {
-    text-decoration: none;
-    font-weight: 600;
     color: #0288d1;
+    text-decoration: none;
   }
 
   .contact-info a:hover {
     text-decoration: underline;
   }
 
-  h2 {
-    border-bottom: 2px solid #0288d1;
-    padding-bottom: 6px;
-    margin-bottom: 16px;
-    font-size: 22px;
-    color: #0288d1;
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 20px;
-    list-style-type: disc;
-    color: #263238;
-  }
-
-  ul li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-  }
-
-  .right section {
-    margin-bottom: 30px;
-  }
-
   .skill {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .skill-name {
-    margin-bottom: 5px;
     font-weight: 600;
-    color: #37474f;
   }
 
   .progress-container {
@@ -127,24 +108,28 @@
 
   .progress {
     height: 14px;
-    background-color: #039be5;
+    background-color: #00897b;
     width: 0;
     border-radius: 10px;
     transition: width 2s ease;
   }
 
-  @media (max-width: 900px) {
-    .container {
-      flex-direction: column;
-      padding: 15px;
-    }
+  .toggle-btn {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: #00796b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 10;
   }
 </style>
 </head>
 <body>
-<div class="circle1 floating"></div>
-<div class="circle2 floating"></div>
-<div class="circle3 floating"></div>
+<button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 <div class="container">
   <div class="left">
     <h1>RUCHITHA</h1>
@@ -156,7 +141,7 @@
     </div>
     <section>
       <h2>Career Objective</h2>
-      <p>To leverage my skills in DevOps, cloud infrastructure, and automation to build scalable and efficient systems. I aim to contribute to impactful projects, continuously learn and grow, and help organizations accelerate their delivery cycles using DevOps principles.</p>
+      <p>DevOps enthusiast with a passion for Linux systems, AWS cloud, and modern infrastructure automation. Eager to implement scalable, secure, and resilient DevOps/SRE pipelines in production-grade systems.</p>
     </section>
     <section>
       <h2>Education</h2>
@@ -170,39 +155,53 @@
       <ul>
         <li><strong>LAMP Auto Deploy</strong>
           <ul>
-            <li>Automated Apache, MySQL, PHP stack using shell and Ansible.</li>
-            <li>Containerized the application and integrated CI/CD pipelines.</li>
-            <li>Deployed using GitHub Actions, with SSL and Route53 configuration.</li>
+            <li>Automated LAMP stack deployment using Ansible with security hardening.</li>
+            <li>Configured SSL using Let's Encrypt and deployed code via GitHub Actions.</li>
+            <li>Containerized setup with Docker for local testing and scalability.</li>
           </ul>
         </li>
         <li><strong>System Resource Monitor</strong>
           <ul>
-            <li>Bash script monitoring CPU, memory, and disk usage.</li>
-            <li>Integrated Slack alerts and daily reports using cron jobs.</li>
+            <li>Shell-based resource tracker with memory, CPU, and disk usage stats.</li>
+            <li>Integrated alerting through Slack API and email notifications.</li>
+            <li>Scheduled using cron for daily summaries and real-time logging.</li>
           </ul>
         </li>
         <li><strong>User Process Tracker</strong>
           <ul>
-            <li>Tracked logged-in users and their background processes.</li>
-            <li>Generated secure logs for audit compliance.</li>
+            <li>Monitored active sessions and background process states via bash.</li>
+            <li>Logged session history and user activity for compliance audits.</li>
+            <li>Used by small teams to track usage in shared environments.</li>
           </ul>
         </li>
         <li><strong>AWS DevOps Infrastructure</strong>
           <ul>
-            <li>Provisioned scalable architecture using Terraform and EC2 autoscaling.</li>
-            <li>Implemented CI/CD with GitHub Actions and container deployment.</li>
+            <li>Provisioned VPCs, subnets, EC2, IAM roles, CloudWatch with Terraform.</li>
+            <li>Implemented CI/CD using GitHub Actions and Dockerized workflows.</li>
+            <li>Enabled auto-scaling and backup solutions to optimize availability and cost.</li>
           </ul>
         </li>
       </ul>
     </section>
 
     <section>
+      <h2>Freelance Experience</h2>
+      <p><strong>Freelance DevOps Engineer</strong> — Remote<br/><em>Apr 2024 – Present</em></p>
+      <ul>
+        <li>Set up CI/CD pipelines for multiple clients using Docker, GitHub Actions, and AWS services.</li>
+        <li>Automated deployments and server configurations using Terraform and Ansible.</li>
+        <li>Designed custom monitoring solutions using Grafana, CloudWatch, and Prometheus.</li>
+        <li>Acted as technical advisor for cloud cost optimization and DevOps best practices.</li>
+      </ul>
+    </section>
+
+    <section>
       <h2>Skills</h2>
-      <div class="skill"><div class="skill-name">AWS Cloud</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
-      <div class="skill"><div class="skill-name">CI/CD (Jenkins, GitHub Actions)</div><div class="progress-container"><div class="progress" style="width: 80%;"></div></div></div>
-      <div class="skill"><div class="skill-name">Terraform & Ansible</div><div class="progress-container"><div class="progress" style="width: 75%;"></div></div></div>
-      <div class="skill"><div class="skill-name">Docker & Kubernetes</div><div class="progress-container"><div class="progress" style="width: 70%;"></div></div></div>
-      <div class="skill"><div class="skill-name">Python & Bash</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
+      <div class="skill"><div class="skill-name">Linux & Shell Scripting</div><div class="progress-container"><div class="progress" style="width: 90%;"></div></div></div>
+      <div class="skill"><div class="skill-name">AWS & Cloud Services</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
+      <div class="skill"><div class="skill-name">CI/CD Tools</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
+      <div class="skill"><div class="skill-name">Terraform & IaC</div><div class="progress-container"><div class="progress" style="width: 80%;"></div></div></div>
+      <div class="skill"><div class="skill-name">Docker & Kubernetes</div><div class="progress-container"><div class="progress" style="width: 80%;"></div></div></div>
     </section>
 
     <section>
@@ -218,37 +217,40 @@
       <h2>Work Experience</h2>
       <p><strong>OnPassive Pvt Ltd</strong> — Associate Cloud Engineer<br/><em>Jul 2023 – Mar 2025</em></p>
       <ul>
-        <li>Managed cloud infrastructure and DevOps pipelines.</li>
-        <li>Configured Jenkins, GitHub Actions for automated deployment.</li>
-        <li>Used Ansible and Terraform for infrastructure provisioning.</li>
-        <li>Collaborated with cross-functional teams to implement cloud-native solutions.</li>
+        <li>Led automation of build/release processes and optimized CI/CD pipelines using GitHub Actions.</li>
+        <li>Provisioned AWS infrastructure with Terraform, improving deployment consistency.</li>
+        <li>Implemented secure EC2, S3, RDS, IAM access control, and budget alerting.</li>
+        <li>Monitored performance with CloudWatch, Prometheus, and Grafana dashboards.</li>
+        <li>Collaborated in Agile environments, improving uptime and deployment velocity.</li>
       </ul>
     </section>
 
     <section>
       <h2>Interests</h2>
       <ul>
-        <li>Cloud Automation & Scripting</li>
-        <li>Containerization & DevOps Tooling</li>
-        <li>Monitoring & Observability</li>
-        <li>Open-source Contributions</li>
-        <li>Infrastructure as Code (IaC)</li>
+        <li>Linux Kernel Tuning & Debugging</li>
+        <li>Site Reliability Engineering (SRE)</li>
+        <li>Infrastructure as Code (IaC) Practices</li>
+        <li>Open Source Projects & Cloud Automation</li>
+        <li>Security Hardening & Observability Tools</li>
       </ul>
     </section>
   </div>
 </div>
-
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const progressBars = document.querySelectorAll('.progress');
-    progressBars.forEach(bar => {
-      const width = bar.style.width;
-      bar.style.width = '0%';
-      setTimeout(() => {
-        bar.style.width = width;
-      }, 200);
-    });
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.progress').forEach(bar => {
+    const width = bar.style.width;
+    bar.style.width = '0%';
+    setTimeout(() => {
+      bar.style.width = width;
+    }, 200);
   });
+});
 </script>
 </body>
 </html>

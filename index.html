@@ -1,265 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ruchitha R. | DevOps & Linux Admin Engineer</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw5q+u5hb7ieLlSm1Gtl3J6tBT92kSvds/3t4SB7A2PnFU9pFfljw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ruchitha R - DevOps / SRE / Linux Admin Portfolio</title>
+<style>
+  /* Reset & base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e9f4ff;
+    color: #0a2540;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
 
-    body {
-      display: flex;
-      min-height: 100vh;
-      background: linear-gradient(90deg, #e6f0fa 0%, #f9fbff 100%);
-      color: #0d1f47;
-      position: relative;
-      overflow: hidden;
-    }
+  /* Background animation canvas */
+  #bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
 
-    /* Background canvas container */
-    #bg-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 0;
-      background-color: #e6f0fa;
-    }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+  }
 
-    /* Left panel styling */
-    .left-panel {
-      flex: 1 1 32%;
-      background-color: #a7c7ff;
-      padding: 3rem 2.5rem 3rem 3rem;
-      color: #102a60;
-      display: flex;
+  /* Left Column */
+  .left {
+    flex: 1;
+    border-right: 2px solid #9ecfff;
+    padding-right: 30px;
+  }
+
+  /* Right Column */
+  .right {
+    flex: 2;
+    padding-left: 30px;
+  }
+
+  /* Name and roles */
+  h1 {
+    font-size: 3rem;
+    color: #1a3d7c;
+    margin-bottom: 6px;
+  }
+  .roles {
+    font-size: 1.1rem;
+    color: #4a90e2;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+
+  /* Section titles */
+  h2 {
+    color: #1a3d7c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 6px;
+  }
+
+  /* Paragraphs & lists */
+  p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
+
+  /* Contact Info */
+  .contact-info {
+    margin-top: 25px;
+  }
+  .contact-info p {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .contact-info a {
+    color: #1a3d7c;
+    text-decoration: none;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+  /* Career Objective and Strengths sections */
+  .career-objective, .strengths {
+    margin-bottom: 30px;
+  }
+  .strengths ul {
+    list-style-type: square;
+    color: #0a2540;
+  }
+
+  /* Work Experience formatting */
+  .work-experience .job {
+    margin-bottom: 25px;
+  }
+  .job h3 {
+    color: #0a2540;
+    margin-bottom: 6px;
+  }
+  .job span {
+    font-style: italic;
+    color: #4a90e2;
+  }
+  .job ul {
+    list-style-type: circle;
+    margin-top: 8px;
+    margin-left: 15px;
+  }
+
+  /* Technical skills & projects */
+  section {
+    margin-bottom: 30px;
+  }
+  section ul {
+    list-style-type: square;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .container {
       flex-direction: column;
-      justify-content: flex-start;
-      box-shadow: 4px 0 15px rgba(10, 30, 70, 0.2);
-      position: relative;
-      z-index: 1;
+      padding: 20px;
     }
-
-    .left-panel h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-      letter-spacing: 1.2px;
-      color: #0b2a66;
+    .left {
+      border-right: none;
+      padding-right: 0;
+      border-bottom: 2px solid #9ecfff;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
     }
-
-    .left-panel .roles {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: #0a2463;
-      margin-bottom: 2rem;
-      line-height: 1.4;
-      font-style: normal;
+    .right {
+      padding-left: 0;
     }
-
-    .left-panel strong {
-      font-weight: 700;
-      color: #082157;
-    }
-
-    .left-panel p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
-      font-weight: 500;
-    }
-
-    .left-panel ul {
-      list-style-type: disc;
-      margin-left: 1.4rem;
-      margin-bottom: 1.6rem;
-    }
-
-    .left-panel ul li {
-      margin-bottom: 0.6rem;
-      font-weight: 500;
-      color: #07316a;
-    }
-
-    /* Contact info */
-    .contact {
-      margin-top: auto;
-      border-top: 1.5px solid #0a2463;
-      padding-top: 1.7rem;
-      font-weight: 600;
-      font-size: 1rem;
-      color: #082157;
-    }
-
-    .contact p {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact p i {
-      font-size: 1.25rem;
-      color: #0a2463;
-      width: 22px;
-      text-align: center;
-    }
-
-    .contact a {
-      color: #07316a;
-      text-decoration: none;
-      word-break: break-word;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* Right panel styling */
-    .right-panel {
-      flex: 1 1 68%;
-      background-color: #f9fbff;
-      padding: 3rem 4rem 3rem 3rem;
-      color: #0d1f47;
-      overflow-y: auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #164dbe;
-      margin-bottom: 0.8rem;
-      font-weight: 700;
-      border-bottom: 3px solid #7eaaff;
-      padding-bottom: 0.3rem;
-    }
-
-    section {
-      margin-bottom: 2.8rem;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-      list-style-type: square;
-    }
-
-    ul li {
-      margin-bottom: 0.7rem;
-      font-weight: 500;
-      font-size: 1.1rem;
-    }
-
-    p {
-      font-size: 1.12rem;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-      font-weight: 400;
-    }
-
-    /* Project images */
-    .project-image {
-      width: 100%;
-      max-width: 700px;
-      margin-top: 1rem;
-      margin-bottom: 1.8rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgb(50 115 230 / 0.25);
-      object-fit: contain;
-    }
-
-    /* Scrollbar for right panel */
-    .right-panel::-webkit-scrollbar {
-      width: 11px;
-    }
-
-    .right-panel::-webkit-scrollbar-thumb {
-      background-color: #7eaaff;
-      border-radius: 30px;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      body {
-        flex-direction: column;
-      }
-      .left-panel,
-      .right-panel {
-        width: 100%;
-        height: auto;
-      }
-      .left-panel {
-        padding: 2rem 2rem 2rem 2rem;
-        text-align: center;
-      }
-      .left-panel .contact p {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .right-panel {
-        padding: 2rem 2rem 3rem 2rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
-
 <body>
-  <canvas id="bg-canvas"></canvas>
 
-  <div class="left-panel">
-    <h1>Ruchitha R.</h1>
-    <p class="roles">
-      Linux Junior Administrator | Site Reliability Engineer (SRE) | DevOps Engineer | Cloud Support Engineer | Infrastructure Engineer | Automation Engineer | Build & Release Engineer
-    </p>
+<!-- Background canvas for animation -->
+<canvas id="bgCanvas"></canvas>
 
-    <p><strong>Career Objective:</strong><br />
-      Aspiring DevOps/SRE Engineer with hands-on experience in cloud infrastructure, CI/CD pipelines, monitoring, and automation. Proficient in AWS, Linux, Python, and Infrastructure as Code. Passionate about delivering reliable, scalable, and automated solutions.
-    </p>
+<div class="container">
+  <div class="left">
+    <h1>Ruchitha R</h1>
+    <div class="roles">
+      Linux Junior Admin | SRE | DevOps Engineer | Cloud Support Engineer
+    </div>
 
-    <p><strong>Strengths:</strong></p>
-    <ul>
-      <li>Excellent communication & collaboration skills</li>
-      <li>Fast learner with strong adaptability to new technologies and environments</li>
-      <li>Analytical thinker with problem-solving and process optimization focus</li>
-      <li>Proactive and committed team player with a passion for continuous improvement</li>
-    </ul>
+    <div class="career-objective">
+      <h2>Career Objective</h2>
+      <p>Aspiring DevOps/Site Reliability Engineer with hands-on experience in cloud infrastructure management, server monitoring, and CI/CD pipeline deployments. Skilled in AWS, Linux, Shell Scripting, Python, and Infrastructure as Code tools. Passionate about ensuring system reliability, scalability, and automation in dynamic environments.</p>
+    </div>
 
-    <div class="contact">
-      <p><i class="fas fa-envelope"></i> ruchithakatakm99@gmail.com</p>
-      <p><i class="fas fa-phone"></i> +91 6303476240 | +91 8340894285</p>
-      <p><i class="fab fa-linkedin"></i>
-        <a href="https://linkedin.com/in/ruchitha-r-423409274" target="_blank"
-          >linkedin.com/in/ruchitha-r-423409274</a
-        >
-      </p>
-      <p><i class="fab fa-github"></i>
-        <a href="https://github.com/ruchitha829" target="_blank">github.com/ruchitha829</a>
-      </p>
+    <div class="strengths">
+      <h2>Strengths</h2>
+      <ul>
+        <li>Strong communication and interpersonal skills</li>
+        <li>Quick adaptability to new technologies and environments</li>
+        <li>Effective inter-team collaboration and management</li>
+        <li>Detail-oriented with a focus on automation and efficiency</li>
+      </ul>
+    </div>
+
+    <div class="contact-info">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
+      <p>Phone: +91 6303476240 / +91 8340894285</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/ruchitha-r-423409274" target="_blank">linkedin.com/in/ruchitha-r-423409274</a></p>
+      <p>GitHub: <a href="https://github.com/ruchitha829" target="_blank">github.com/ruchitha829</a></p>
     </div>
   </div>
 
-  <div class="right-panel">
-    <section>
+  <div class="right">
+    <section class="work-experience">
       <h2>Work Experience</h2>
-      <p>
-        <strong>Associate Cloud Engineer</strong> – OnPassive Private Limited<br />
-        <em>July 2023 – March 2025</em>
-      </p>
+      <div class="job">
+        <h3>Associate Cloud Engineer - OnPassive Private Limited</h3>
+        <span>July 2023 – March 2025</span>
+        <ul>
+          <li>Designed and maintained CI/CD pipelines using Jenkins, Git, and GitHub Actions.</li>
+          <li>Monitored server performance using Amazon CloudWatch, Nagios, and Prometheus; configured alerting and logging.</li>
+          <li>Managed AWS cloud infrastructure: EC2, S3, IAM, VPC, CloudFormation, Auto Scaling, Elastic Beanstalk.</li>
+          <li>Automated server provisioning and maintenance using Shell scripting and Python.</li>
+          <li>Implemented Infrastructure as Code (IaC) with Terraform and Ansible for repeatable environment setups.</li>
+          <li>Collaborated with dev teams to integrate DevOps into SDLC, supporting agile continuous delivery.</li>
+          <li>Participated in on-call rotations, incident response, and root cause analysis to improve reliability.</li>
+          <li>Created documentation for deployment, monitoring, and incident handling procedures.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
       <ul>
-        <li>Designed and maintained CI/CD pipelines using Jenkins, GitHub Actions, and GitLab CI</li>
-        <li>Monitored application and server performance with Amazon CloudWatch, Prometheus, and Nagios</
+        <li><strong>Cloud & Infra:</strong> AWS (EC2, S3, IAM, VPC, CloudFormation, Auto Scaling, Elastic Beanstalk)</li>
+        <li><strong>DevOps Tools:</strong> Docker, Jenkins, Kubernetes, Ansible, Terraform</li>
+        <li><strong>CI/CD:</strong> Jenkins, GitHub Actions, GitLab CI</li>
+        <li><strong>Programming Languages:</strong> Python, Shell scripting, C, Java, JavaScript</li>
+        <li><strong>Operating Systems:</strong> Linux, Windows</li>
+        <li><strong>Version Control:</strong> Git, GitHub, GitLab, Bitbucket</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>LAMP Auto Deployment:</strong> Automated deployment scripts for Linux-Apache-MySQL-PHP stacks to speed up environment setup.</li>
+        <li><strong>System Monitor:</strong> Real-time monitoring tool for system resources (CPU, Memory, Disk) using shell scripting and Python.</li>
+        <li><strong>User Process Tracker:</strong> Tool to monitor logged-in users and their processes, enhancing security and management.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>B.Tech in Electrical and Electronics Engineering</strong><br/>
+         Swami Ramananda Teertha Institute of Science and Technology<br/>
+         Graduated July 2021 | CGPA: 8.4
+      </p>
+      <p><strong>Intermediate</strong><br/>
+         Gowthami Junior College, 2017 | 97.2%
+      </p>
+      <p><strong>SSC</strong><br/>
+         Krishnaveni Talent School, 2015 | 9.8 CGPA
+      </p>
+    </section>
+  </div>
+</div>
+
+<script>
+  // Background animated dots connected by lines (subtle professional network effect)
+  const canvas = document.getElementById('bgCanvas');
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let points = [];
+
+  function setup() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+
+    points = [];
+    const pointCount = Math.floor(width / 40);
+    for (let i = 0; i < pointCount; i++) {
+      points.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = 'rgba(74,144,226,0.6)';
+    ctx.strokeStyle = 'rgba(74,144,226,0.3)';
+    ctx.lineWidth = 1;
+
+    // Move points
+    points.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > width) p.vx = -p.vx;
+      if (p.y < 0 || p.y > height) p.vy = -p.vy;
+    });
+
+    // Draw points and connect lines
+    for (let i = 0; i < points.length; i++) {
+      const p = points[i];
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+      ctx.fill();
+
+      for (let j = i + 1; j < points.length; j++) {
+        const p2 = points[j];
+        const dx = p.x - p2.x;
+        const dy = p.y - p2.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 120) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', setup);
+
+  setup();
+  draw();
+</script>
+
+</body>
+</html>

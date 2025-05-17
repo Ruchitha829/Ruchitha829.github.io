@@ -1,256 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ruchitha | DevOps Portfolio</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(-45deg, #e0f7fa, #ffe0b2, #e1bee7, #dcedc8);
-    background-size: 400% 400%;
-    animation: gradientBG 20s ease infinite;
-    color: #212121;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruchitha Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #dbeafe, #e0f2fe, #f0fdf4, #fdf2f8);
+      background-size: 400% 400%;
+      animation: gradient 20s ease infinite;
+      color: #1e293b;
+    }
 
-  @keyframes gradientBG {
-    0% {background-position:0% 50%;}
-    50% {background-position:100% 50%;}
-    100% {background-position:0% 50%;}
-  }
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
 
-  .dark-mode {
-    background: linear-gradient(-45deg, #263238, #37474f, #455a64, #1c313a);
-    color: #fafafa;
-  }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px;
+    }
 
-  .container {
-    max-width: 1200px;
-    margin: 60px auto;
-    display: flex;
-    gap: 30px;
-    padding: 20px;
-    z-index: 2;
-    position: relative;
-  }
+    .left, .right {
+      flex: 1;
+      min-width: 350px;
+      padding: 20px;
+    }
 
-  .left, .right {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 14px;
-    padding: 30px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
+    h1 {
+      font-size: 36px;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
 
-  .dark-mode .left, .dark-mode .right {
-    background: rgba(33, 33, 33, 0.95);
-    color: #f5f5f5;
-  }
+    h2 {
+      color: #1e40af;
+      border-bottom: 2px solid #6366f1;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
 
-  h1 {
-    font-size: 38px;
-    color: #004d40;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #00796b;
-    padding-bottom: 10px;
-  }
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-  h2 {
-    color: #00695c;
-    border-bottom: 2px solid #004d40;
-    padding-bottom: 6px;
-    margin-bottom: 16px;
-  }
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
 
-  ul {
-    padding-left: 20px;
-    list-style: disc;
-  }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
 
-  ul li {
-    margin-bottom: 8px;
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  .contact-info p, .contact-info a {
-    font-size: 14px;
-    margin: 6px 0;
-    color: #37474f;
-  }
+    .skills-bar {
+      background: #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
 
-  .contact-info a {
-    color: #0288d1;
-    text-decoration: none;
-  }
+    .skills-bar span {
+      display: block;
+      height: 20px;
+      background: #3b82f6;
+      color: white;
+      padding-left: 10px;
+      line-height: 20px;
+      border-radius: 10px;
+      animation: growBar 2s ease-out;
+    }
 
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-
-  .skill {
-    margin-bottom: 16px;
-  }
-
-  .skill-name {
-    font-weight: 600;
-  }
-
-  .progress-container {
-    width: 100%;
-    background-color: #cfd8dc;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .progress {
-    height: 14px;
-    background-color: #00897b;
-    width: 0;
-    border-radius: 10px;
-    transition: width 2s ease;
-  }
-
-  .toggle-btn {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    background: #00796b;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    z-index: 10;
-  }
-</style>
+    @keyframes growBar {
+      from {width: 0%;}
+      to {width: 100%;}
+    }
+  </style>
 </head>
 <body>
-<button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-<div class="container">
-  <div class="left">
-    <h1>RUCHITHA</h1>
-    <div class="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
-      <p><strong>Mobile:</strong> +91 6303476240 / +91 8340894285</p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ruchitha-r-423409274" target="_blank">linkedin.com/in/ruchitha-r-423409274</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Ruchitha829" target="_blank">github.com/Ruchitha829</a></p>
-    </div>
-    <section>
+  <div class="container">
+    <div class="left">
+      <h1>Ruchitha</h1>
+      <p><strong>Email:</strong> ruchithakatakam99@gmail.com</p>
+      <p><strong>Phone:</strong> +91 6303476240 / +91 8340894285</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank">Ruchitha Profile</a></p>
+
       <h2>Career Objective</h2>
-      <p>DevOps enthusiast with a passion for Linux systems, AWS cloud, and modern infrastructure automation. Eager to implement scalable, secure, and resilient DevOps/SRE pipelines in production-grade systems.</p>
-    </section>
-    <section>
-      <h2>Education</h2>
-      <p><strong>B.Tech in Electrical Engineering</strong><br />Jawaharlal Nehru Technological University, Hyderabad — 2021</p>
-    </section>
-  </div>
+      <p>Aspiring DevOps and SRE professional with a strong background in Linux, AWS, automation, and infrastructure as code. Eager to contribute to scalable deployments and maintain high system availability.</p>
 
-  <div class="right">
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>LAMP Auto Deploy</strong>
-          <ul>
-            <li>Automated LAMP stack deployment using Ansible with security hardening.</li>
-            <li>Configured SSL using Let's Encrypt and deployed code via GitHub Actions.</li>
-            <li>Containerized setup with Docker for local testing and scalability.</li>
-          </ul>
-        </li>
-        <li><strong>System Resource Monitor</strong>
-          <ul>
-            <li>Shell-based resource tracker with memory, CPU, and disk usage stats.</li>
-            <li>Integrated alerting through Slack API and email notifications.</li>
-            <li>Scheduled using cron for daily summaries and real-time logging.</li>
-          </ul>
-        </li>
-        <li><strong>User Process Tracker</strong>
-          <ul>
-            <li>Monitored active sessions and background process states via bash.</li>
-            <li>Logged session history and user activity for compliance audits.</li>
-            <li>Used by small teams to track usage in shared environments.</li>
-          </ul>
-        </li>
-        <li><strong>AWS DevOps Infrastructure</strong>
-          <ul>
-            <li>Provisioned VPCs, subnets, EC2, IAM roles, CloudWatch with Terraform.</li>
-            <li>Implemented CI/CD using GitHub Actions and Dockerized workflows.</li>
-            <li>Enabled auto-scaling and backup solutions to optimize availability and cost.</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Freelance Experience</h2>
-      <p><strong>Freelance DevOps Engineer</strong> — Remote<br/><em>Apr 2024 – Present</em></p>
-      <ul>
-        <li>Set up CI/CD pipelines for multiple clients using Docker, GitHub Actions, and AWS services.</li>
-        <li>Automated deployments and server configurations using Terraform and Ansible.</li>
-        <li>Designed custom monitoring solutions using Grafana, CloudWatch, and Prometheus.</li>
-        <li>Acted as technical advisor for cloud cost optimization and DevOps best practices.</li>
-      </ul>
-    </section>
-
-    <section>
       <h2>Skills</h2>
-      <div class="skill"><div class="skill-name">Linux & Shell Scripting</div><div class="progress-container"><div class="progress" style="width: 90%;"></div></div></div>
-      <div class="skill"><div class="skill-name">AWS & Cloud Services</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
-      <div class="skill"><div class="skill-name">CI/CD Tools</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
-      <div class="skill"><div class="skill-name">Terraform & IaC</div><div class="progress-container"><div class="progress" style="width: 80%;"></div></div></div>
-      <div class="skill"><div class="skill-name">Docker & Kubernetes</div><div class="progress-container"><div class="progress" style="width: 80%;"></div></div></div>
-    </section>
+      <div class="skills-bar"><span style="width: 90%">Linux</span></div>
+      <div class="skills-bar"><span style="width: 85%">AWS</span></div>
+      <div class="skills-bar"><span style="width: 80%">Shell Scripting</span></div>
+      <div class="skills-bar"><span style="width: 75%">Python</span></div>
+      <div class="skills-bar"><span style="width: 85%">CI/CD</span></div>
+      <div class="skills-bar"><span style="width: 70%">Terraform</span></div>
+    </div>
 
-    <section>
+    <div class="right">
+      <h2>Experience</h2>
+      <p><strong>OnPassive Pvt Ltd</strong> – Associate Cloud Engineer<br><em>July 2023 – March 2025</em></p>
+      <ul>
+        <li>Built CI/CD pipelines using GitHub Actions and Jenkins for multiple environments.</li>
+        <li>Provisioned cloud infrastructure with Terraform, ensuring repeatable deployments.</li>
+        <li>Managed EC2 instances, S3 buckets, IAM roles, and security groups.</li>
+        <li>Monitored logs and metrics using AWS CloudWatch and custom Bash scripts.</li>
+        <li>Deployed LAMP stacks and containerized apps using Docker.</li>
+        <li>Handled on-call duties, triaged incidents, and created root cause analysis reports.</li>
+      </ul>
+
+      <h2>Projects</h2>
+
+      <p><strong>LAMP Auto Deploy</strong> – Automated Web Stack Deployment</p>
+      <ul>
+        <li>Provisioned LAMP stack using Ansible on AWS EC2 instances.</li>
+        <li>Configured SSL and DNS using Route53 and Certbot.</li>
+        <li>Enabled CI/CD pipeline via GitHub Actions.</li>
+        <li>Dockerized the application for modular deployment.</li>
+      </ul>
+
+      <p><strong>System Resource Monitor</strong> – Resource Monitoring with Slack Alerts</p>
+      <ul>
+        <li>Built Bash script to monitor CPU, memory, disk usage on Linux.</li>
+        <li>Scheduled cron jobs for daily system health reports.</li>
+        <li>Integrated with Slack to send real-time alerts.</li>
+      </ul>
+
+      <p><strong>User Process Tracker</strong> – Secure User Monitoring Tool</p>
+      <ul>
+        <li>Tracked logged-in users and their background processes.</li>
+        <li>Generated timestamped logs for security compliance.</li>
+        <li>Enhanced audit trail capabilities for Linux systems.</li>
+      </ul>
+
+      <p><strong>AWS DevOps Infrastructure</strong> – Scalable and Secure Cloud Setup</p>
+      <ul>
+        <li>Provisioned infrastructure using Terraform with autoscaling and load balancing.</li>
+        <li>CI/CD pipelines integrated with GitHub Actions and Docker containers.</li>
+        <li>Implemented security best practices including IAM roles, SGs, and VPC setup.</li>
+      </ul>
+
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech in EEE</strong> – SRTIST, CGPA: 8.4 (2021)</li>
+        <li><strong>Intermediate</strong> – Gowthami Jr. College, 97.2%</li>
+        <li><strong>SSC</strong> – Krishnaveni Talent School, 9.8 CGPA</li>
+      </ul>
+
       <h2>Certifications</h2>
       <ul>
         <li>AWS Certified Solutions Architect – Associate</li>
         <li>Linux Foundation Certified System Administrator (LFCS)</li>
         <li>Docker Certified Associate (DCA)</li>
       </ul>
-    </section>
 
-    <section>
-      <h2>Work Experience</h2>
-      <p><strong>OnPassive Pvt Ltd</strong> — Associate Cloud Engineer<br/><em>Jul 2023 – Mar 2025</em></p>
-      <ul>
-        <li>Led automation of build/release processes and optimized CI/CD pipelines using GitHub Actions.</li>
-        <li>Provisioned AWS infrastructure with Terraform, improving deployment consistency.</li>
-        <li>Implemented secure EC2, S3, RDS, IAM access control, and budget alerting.</li>
-        <li>Monitored performance with CloudWatch, Prometheus, and Grafana dashboards.</li>
-        <li>Collaborated in Agile environments, improving uptime and deployment velocity.</li>
-      </ul>
-    </section>
-
-    <section>
       <h2>Interests</h2>
       <ul>
-        <li>Linux Kernel Tuning & Debugging</li>
-        <li>Site Reliability Engineering (SRE)</li>
-        <li>Infrastructure as Code (IaC) Practices</li>
-        <li>Open Source Projects & Cloud Automation</li>
-        <li>Security Hardening & Observability Tools</li>
+        <li>Linux System Internals & Tuning</li>
+        <li>DevOps Automation and CI/CD</li>
+        <li>Cloud Infrastructure using AWS</li>
+        <li>Terraform & Infrastructure as Code</li>
+        <li>Monitoring with Prometheus, CloudWatch</li>
       </ul>
-    </section>
+    </div>
   </div>
-</div>
-<script>
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.progress').forEach(bar => {
-    const width = bar.style.width;
-    bar.style.width = '0%';
-    setTimeout(() => {
-      bar.style.width = width;
-    }, 200);
-  });
-});
-</script>
 </body>
 </html>

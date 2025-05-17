@@ -1,325 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ruchitha R - DevOps / SRE / Linux Admin Portfolio</title>
-<style>
-  /* Reset & base */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #e9f4ff;
-    color: #0a2540;
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-  }
-
-  /* Background animation canvas */
-  #bgCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-  }
-
-  /* Container */
-  .container {
-    max-width: 1200px;
-    margin: 40px auto;
-    background: white;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    border-radius: 12px;
-    display: flex;
-    padding: 40px;
-    gap: 40px;
-  }
-
-  /* Left Column */
-  .left {
-    flex: 1;
-    border-right: 2px solid #9ecfff;
-    padding-right: 30px;
-  }
-
-  /* Right Column */
-  .right {
-    flex: 2;
-    padding-left: 30px;
-  }
-
-  /* Name and roles */
-  h1 {
-    font-size: 3rem;
-    color: #1a3d7c;
-    margin-bottom: 6px;
-  }
-  .roles {
-    font-size: 1.1rem;
-    color: #4a90e2;
-    font-weight: 600;
-    margin-bottom: 25px;
-  }
-
-  /* Section titles */
-  h2 {
-    color: #1a3d7c;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #4a90e2;
-    padding-bottom: 6px;
-  }
-
-  /* Paragraphs & lists */
-  p {
-    line-height: 1.5;
-    margin-bottom: 15px;
-  }
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
-  }
-  ul li {
-    margin-bottom: 8px;
-  }
-
-  /* Contact Info */
-  .contact-info {
-    margin-top: 25px;
-  }
-  .contact-info p {
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .contact-info a {
-    color: #1a3d7c;
-    text-decoration: none;
-  }
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-
-  /* Career Objective and Strengths sections */
-  .career-objective, .strengths {
-    margin-bottom: 30px;
-  }
-  .strengths ul {
-    list-style-type: square;
-    color: #0a2540;
-  }
-
-  /* Work Experience formatting */
-  .work-experience .job {
-    margin-bottom: 25px;
-  }
-  .job h3 {
-    color: #0a2540;
-    margin-bottom: 6px;
-  }
-  .job span {
-    font-style: italic;
-    color: #4a90e2;
-  }
-  .job ul {
-    list-style-type: circle;
-    margin-top: 8px;
-    margin-left: 15px;
-  }
-
-  /* Technical skills & projects */
-  section {
-    margin-bottom: 30px;
-  }
-  section ul {
-    list-style-type: square;
-  }
-
-  /* Responsive */
-  @media (max-width: 900px) {
-    .container {
-      flex-direction: column;
-      padding: 20px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruchitha's DevOps Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f9;
+      color: #333;
     }
-    .left {
-      border-right: none;
-      padding-right: 0;
-      border-bottom: 2px solid #9ecfff;
-      padding-bottom: 20px;
-      margin-bottom: 30px;
+    header {
+      background-color: #2d89ef;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
     }
-    .right {
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      border-bottom: 3px solid #2d89ef;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: #2d89ef;
+    }
+    ul.skills-list {
+      list-style: none;
       padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
     }
-  }
-</style>
+    ul.skills-list li {
+      background-color: #2d89ef;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .project {
+      margin-bottom: 1.5rem;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgb(0 0 0 / 0.1);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #1a4d9c;
+    }
+    .project p {
+      margin: 0.4rem 0 0;
+      line-height: 1.4;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background-color: #2d89ef;
+      color: white;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #ffec99;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      ul.skills-list {
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Ruchitha</h1>
+    <p>DevOps Engineer | AWS | Terraform | CI/CD | Automation</p>
+  </header>
 
-<!-- Background canvas for animation -->
-<canvas id="bgCanvas"></canvas>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        DevOps Engineer passionate about automating infrastructure and streamlining deployment workflows. Experienced in AWS, Terraform, Jenkins, Ansible, Docker, and Linux system administration. Skilled in building scalable, secure, and cost-effective cloud environments with a strong focus on Infrastructure as Code and CI/CD pipelines. Actively seeking opportunities in India to contribute and grow in dynamic tech teams.
+      </p>
+    </section>
 
-<div class="container">
-  <div class="left">
-    <h1>Ruchitha R</h1>
-    <div class="roles">
-      Linux Junior Admin | SRE | DevOps Engineer | Cloud Support Engineer
-    </div>
-
-    <div class="career-objective">
-      <h2>Career Objective</h2>
-      <p>Aspiring DevOps/Site Reliability Engineer with hands-on experience in cloud infrastructure management, server monitoring, and CI/CD pipeline deployments. Skilled in AWS, Linux, Shell Scripting, Python, and Infrastructure as Code tools. Passionate about ensuring system reliability, scalability, and automation in dynamic environments.</p>
-    </div>
-
-    <div class="strengths">
-      <h2>Strengths</h2>
-      <ul>
-        <li>Strong communication and interpersonal skills</li>
-        <li>Quick adaptability to new technologies and environments</li>
-        <li>Effective inter-team collaboration and management</li>
-        <li>Detail-oriented with a focus on automation and efficiency</li>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>AWS (EC2, S3, IAM, CloudFormation)</li>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Jenkins</li>
+        <li>GitLab CI/CD</li>
+        <li>Docker</li>
+        <li>Kubernetes (basic)</li>
+        <li>Bash Scripting</li>
+        <li>Python</li>
+        <li>Prometheus</li>
+        <li>Grafana</li>
+        <li>ELK Stack</li>
+        <li>Git & GitHub</li>
+        <li>Linux (CentOS, Ubuntu)</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="contact-info">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
-      <p>Phone: +91 6303476240 / +91 8340894285</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/ruchitha-r-423409274" target="_blank">linkedin.com/in/ruchitha-r-423409274</a></p>
-      <p>GitHub: <a href="https://github.com/ruchitha829" target="_blank">github.com/ruchitha829</a></p>
-    </div>
-  </div>
+    <section id="projects">
+      <h2>Projects</h2>
 
-  <div class="right">
-    <section class="work-experience">
-      <h2>Work Experience</h2>
-      <div class="job">
-        <h3>Associate Cloud Engineer - OnPassive Private Limited</h3>
-        <span>July 2023 – March 2025</span>
-        <ul>
-          <li>Designed and maintained CI/CD pipelines using Jenkins, Git, and GitHub Actions.</li>
-          <li>Monitored server performance using Amazon CloudWatch, Nagios, and Prometheus; configured alerting and logging.</li>
-          <li>Managed AWS cloud infrastructure: EC2, S3, IAM, VPC, CloudFormation, Auto Scaling, Elastic Beanstalk.</li>
-          <li>Automated server provisioning and maintenance using Shell scripting and Python.</li>
-          <li>Implemented Infrastructure as Code (IaC) with Terraform and Ansible for repeatable environment setups.</li>
-          <li>Collaborated with dev teams to integrate DevOps into SDLC, supporting agile continuous delivery.</li>
-          <li>Participated in on-call rotations, incident response, and root cause analysis to improve reliability.</li>
-          <li>Created documentation for deployment, monitoring, and incident handling procedures.</li>
-        </ul>
+      <div class="project">
+        <h3>AWS Infrastructure Automation</h3>
+        <p>Automated provisioning and management of AWS resources using Terraform and Ansible, reducing manual configuration time by 50%. Implemented secure IAM policies and automated backups using AWS Lambda functions.</p>
+      </div>
+
+      <div class="project">
+        <h3>CI/CD Pipeline Setup with Jenkins</h3>
+        <p>Designed and implemented automated build and deployment pipelines using Jenkins for containerized microservices, improving deployment speed and reliability.</p>
+      </div>
+
+      <div class="project">
+        <h3>Docker-Based Application Deployment</h3>
+        <p>Containerized legacy applications using Docker, simplifying deployment and scaling processes on cloud environments.</p>
+      </div>
+
+      <div class="project">
+        <h3>Linux System Monitoring Tool</h3>
+        <p>Developed a Bash script-based system resource monitor that tracks CPU, memory, disk, and network usage, integrated with alert notifications.</p>
       </div>
     </section>
 
-    <section>
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Cloud & Infra:</strong> AWS (EC2, S3, IAM, VPC, CloudFormation, Auto Scaling, Elastic Beanstalk)</li>
-        <li><strong>DevOps Tools:</strong> Docker, Jenkins, Kubernetes, Ansible, Terraform</li>
-        <li><strong>CI/CD:</strong> Jenkins, GitHub Actions, GitLab CI</li>
-        <li><strong>Programming Languages:</strong> Python, Shell scripting, C, Java, JavaScript</li>
-        <li><strong>Operating Systems:</strong> Linux, Windows</li>
-        <li><strong>Version Control:</strong> Git, GitHub, GitLab, Bitbucket</li>
-      </ul>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:ruchithakatakam99@gmail.com">ruchithakatakam99@gmail.com</a></p>
+      <p>Phone: +91-8340894285</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank" rel="noopener">linkedin.com/in/ruchitha-r-423409274</a></p>
+      <p>GitHub: <a href="https://github.com/ruchitha829" target="_blank" rel="noopener">github.com/ruchitha829</a></p>
     </section>
+  </main>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>LAMP Auto Deployment:</strong> Automated deployment scripts for Linux-Apache-MySQL-PHP stacks to speed up environment setup.</li>
-        <li><strong>System Monitor:</strong> Real-time monitoring tool for system resources (CPU, Memory, Disk) using shell scripting and Python.</li>
-        <li><strong>User Process Tracker:</strong> Tool to monitor logged-in users and their processes, enhancing security and management.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <p><strong>B.Tech in Electrical and Electronics Engineering</strong><br/>
-         Swami Ramananda Teertha Institute of Science and Technology<br/>
-         Graduated July 2021 | CGPA: 8.4
-      </p>
-      <p><strong>Intermediate</strong><br/>
-         Gowthami Junior College, 2017 | 97.2%
-      </p>
-      <p><strong>SSC</strong><br/>
-         Krishnaveni Talent School, 2015 | 9.8 CGPA
-      </p>
-    </section>
-  </div>
-</div>
-
-<script>
-  // Background animated dots connected by lines (subtle professional network effect)
-  const canvas = document.getElementById('bgCanvas');
-  const ctx = canvas.getContext('2d');
-  let width, height;
-  let points = [];
-
-  function setup() {
-    width = window.innerWidth;
-    height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-
-    points = [];
-    const pointCount = Math.floor(width / 40);
-    for (let i = 0; i < pointCount; i++) {
-      points.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-      });
-    }
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, width, height);
-    ctx.fillStyle = 'rgba(74,144,226,0.6)';
-    ctx.strokeStyle = 'rgba(74,144,226,0.3)';
-    ctx.lineWidth = 1;
-
-    // Move points
-    points.forEach(p => {
-      p.x += p.vx;
-      p.y += p.vy;
-      if (p.x < 0 || p.x > width) p.vx = -p.vx;
-      if (p.y < 0 || p.y > height) p.vy = -p.vy;
-    });
-
-    // Draw points and connect lines
-    for (let i = 0; i < points.length; i++) {
-      const p = points[i];
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
-      ctx.fill();
-
-      for (let j = i + 1; j < points.length; j++) {
-        const p2 = points[j];
-        const dx = p.x - p2.x;
-        const dy = p.y - p2.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 120) {
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(p2.x, p2.y);
-          ctx.stroke();
-        }
-      }
-    }
-
-    requestAnimationFrame(draw);
-  }
-
-  window.addEventListener('resize', setup);
-
-  setup();
-  draw();
-</script>
-
+  <footer>
+    <p>© 2025 Ruchitha | Designed for DevOps & Cloud Career Growth</p>
+  </footer>
 </body>
 </html>

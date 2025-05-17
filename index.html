@@ -3,158 +3,276 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruchitha | DevOps Engineer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruchitha | DevOps & Linux Admin Engineer</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body {
       display: flex;
-      height: 100vh;
-      color: #000;
-      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      min-height: 100vh;
+      color: #1a1a1a;
+      background: linear-gradient(90deg, #d0f0ff 0%, #ffffff 100%);
       overflow: hidden;
+      position: relative;
+      z-index: 0;
     }
 
+    /* Animated background container */
+    #background-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: #e3f2fd;
+    }
+
+    /* Left Panel */
     .left-panel {
-      width: 30%;
-      background-color: #b3e5fc;
-      padding: 2rem;
+      width: 32%;
+      background-color: #90caf9; /* lighter bright blue */
+      padding: 2.5rem 2rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.4rem;
+      color: #0d47a1;
+      box-shadow: 3px 0 10px rgb(14 63 113 / 0.2);
+      position: relative;
+      z-index: 1;
     }
 
     .left-panel h1 {
-      font-size: 2.2rem;
-      color: #01579b;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      margin-bottom: 0.15rem;
+      color: #0d47a1;
+    }
+
+    .left-panel .role-open {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0b3d91;
+      margin-bottom: 1.2rem;
+      line-height: 1.4;
+      font-style: italic;
     }
 
     .left-panel p {
       font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .left-panel strong {
+      color: #072f6b;
+    }
+
+    .left-panel ul {
+      list-style-type: disc;
+      margin-left: 1.2rem;
+      margin-top: 0.4rem;
+    }
+
+    .left-panel ul li {
+      margin-bottom: 0.55rem;
+      font-weight: 500;
+      color: #093a9a;
     }
 
     .left-panel .contact {
-      margin-top: 2rem;
+      margin-top: 2.3rem;
+      border-top: 1px solid #0b3d91;
+      padding-top: 1.5rem;
     }
 
     .left-panel .contact p {
-      margin: 0.3rem 0;
-      font-size: 0.95rem;
+      margin: 0.35rem 0;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: #07316a;
+      font-weight: 600;
     }
 
+    .left-panel .contact p i {
+      color: #0b3d91;
+      font-size: 1.2rem;
+      width: 20px;
+      text-align: center;
+    }
+
+    /* Right Panel */
     .right-panel {
-      width: 70%;
-      padding: 2rem;
+      width: 68%;
+      padding: 3rem 3.5rem 3rem 3rem;
       overflow-y: auto;
+      color: #0d1f47;
+      position: relative;
+      z-index: 1;
     }
 
     h2 {
-      color: #0277bd;
-      margin-bottom: 0.5rem;
+      color: #1565c0;
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+      border-bottom: 2px solid #64b5f6;
+      padding-bottom: 0.25rem;
+      font-size: 1.8rem;
     }
 
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.8rem;
     }
 
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.4rem;
+      list-style-type: square;
     }
 
+    ul li {
+      margin-bottom: 0.65rem;
+      font-weight: 500;
+      font-size: 1.05rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.65;
+      margin-bottom: 0.9rem;
+      font-weight: 400;
+    }
+
+    /* Project images */
     .project-image {
       width: 100%;
-      max-width: 600px;
-      margin-top: 0.5rem;
-      border-radius: 8px;
+      max-width: 700px;
+      margin-top: 0.7rem;
+      margin-bottom: 1.8rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgb(33 150 243 / 0.3);
+      object-fit: contain;
+    }
+
+    /* Scrollbar for right panel */
+    .right-panel::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .right-panel::-webkit-scrollbar-thumb {
+      background-color: #64b5f6;
+      border-radius: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      .left-panel,
+      .right-panel {
+        width: 100%;
+        height: auto;
+      }
+      .left-panel {
+        padding: 1.5rem 1.8rem;
+        text-align: center;
+      }
+      .left-panel .contact p {
+        justify-content: center;
+      }
+      .right-panel {
+        padding: 2rem 2rem 3rem 2rem;
+      }
     }
   </style>
 </head>
 
 <body>
+  <canvas id="background-canvas"></canvas>
+
   <div class="left-panel">
     <h1>Ruchitha R.</h1>
-    <p>DevOps & Site Reliability Enthusiast</p>
+    <p class="role-open">
+      Open to roles in <strong>DevOps, SRE, Linux Administration, Cloud Support, Site Reliability</strong>
+    </p>
+
     <p><strong>Career Objective:</strong><br />
-      Aspiring DevOps/SRE Engineer with hands-on experience in cloud infrastructure, monitoring, and CI/CD. Proficient in AWS, Linux, Python, and automation scripting. Focused on building scalable, reliable systems.
+      Aspiring DevOps/SRE Engineer with strong experience in cloud infra, CI/CD, monitoring, and automation. Skilled in AWS, Linux, Python, and
+      Infrastructure as Code. Passionate about scalable, reliable, and automated systems.
     </p>
-    <p><strong>Strengths:</strong><br />
-      - Strong communication and inter-team collaboration<br />
-      - Quick adaptability to new tech environments<br />
-      - Passion for learning and process optimization<br />
-      - Enthusiastic team player and problem solver
-    </p>
+
+    <p><strong>Strengths:</strong></p>
+    <ul>
+      <li>Excellent communication &amp; collaboration skills</li>
+      <li>Fast learner, quick adaptability to new environments</li>
+      <li>Strong problem-solving &amp; process improvement mindset</li>
+      <li>Proactive and passionate team player</li>
+    </ul>
+
     <div class="contact">
       <p><i class="fas fa-envelope"></i> ruchithakatakm99@gmail.com</p>
       <p><i class="fas fa-phone"></i> +91 6303476240 | +91 8340894285</p>
-      <p><i class="fab fa-linkedin"></i> linkedin.com/in/ruchitha-r-423409274</p>
+      <p><i class="fab fa-linkedin"></i>
+        <a
+          href="https://linkedin.com/in/ruchitha-r-423409274"
+          target="_blank"
+          style="color:#07316a; text-decoration:none;"
+          >linkedin.com/in/ruchitha-r-423409274</a
+        >
+      </p>
+      <p><i class="fab fa-github"></i>
+        <a
+          href="https://github.com/ruchitha829"
+          target="_blank"
+          style="color:#07316a; text-decoration:none;"
+          >github.com/ruchitha829</a
+        >
+      </p>
     </div>
   </div>
 
   <div class="right-panel">
     <section>
       <h2>Work Experience</h2>
-      <p><strong>Associate Cloud Engineer</strong> – OnPassive Private Limited<br />
-        <em>July 2023 – Present</em></p>
+      <p>
+        <strong>Associate Cloud Engineer</strong> – OnPassive Private Limited<br />
+        <em>July 2023 – March 2025</em>
+      </p>
       <ul>
-        <li>Designed CI/CD pipelines with Jenkins, GitHub Actions</li>
-        <li>Monitored servers using CloudWatch, Prometheus, Nagios</li>
-        <li>Managed AWS infrastructure (EC2, S3, IAM, CloudFormation)</li>
-        <li>Automated tasks with Shell scripting and Python</li>
-        <li>Provisioned infra with Terraform and Ansible (IaC)</li>
-        <li>Collaborated with Dev teams to support Agile/DevOps culture</li>
-        <li>On-call support, RCA, MTTR improvement, documentation</li>
+        <li>Designed and maintained CI/CD pipelines using Jenkins, GitHub Actions</li>
+        <li>Monitored server and application performance using CloudWatch, Prometheus, and Nagios</li>
+        <li>Managed AWS infrastructure including EC2, S3, IAM, VPC, and CloudFormation</li>
+        <li>Automated server provisioning and tasks with Shell scripting and Python</li>
+        <li>Implemented Infrastructure as Code with Terraform and Ansible for repeatable deployments</li>
+        <li>Collaborated with dev teams to integrate DevOps best practices into SDLC</li>
+        <li>Participated in incident response, root cause analysis, and on-call rotations</li>
       </ul>
     </section>
 
     <section>
       <h2>Projects</h2>
-      <p><strong>LAMP-Auto-Deploy</strong><br />
-        Automated LAMP stack deployment using Ansible and Shell scripting.</p>
-      <img src="images/lamp.png" class="project-image" alt="LAMP Project">
 
-      <p><strong>System Monitor</strong><br />
-        Real-time monitoring of CPU, RAM, disk usage. Alerts via script triggers.</p>
-      <img src="images/system-monitor.png" class="project-image" alt="System Monitor">
+      <p>
+        <strong>LAMP-Auto-Deploy</strong><br />
+        Automated LAMP stack deployment using Ansible and shell scripting, enabling fast, consistent environment setups.
+      </p>
+      <img
+        src="https://raw.githubusercontent.com/ruchitha829/Ruchitha829.github.io/main/images/lamp.png"
+        alt="LAMP Auto Deploy"
+        class="project-image"
+      />
 
-      <p><strong>User Process Tracker</strong><br />
-        Shell script to track and log logged-in users with processes in use.</p>
-      <img src="images/user-tracker.png" class="project-image" alt="User Tracker">
-    </section>
-
-    <section>
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Cloud:</strong> AWS (EC2, S3, IAM, VPC, CloudFront, CloudFormation)</li>
-        <li><strong>DevOps Tools:</strong> Docker, Jenkins, Kubernetes</li>
-        <li><strong>IaC:</strong> Terraform, Ansible</li>
-        <li><strong>Monitoring:</strong> Prometheus, Nagios, CloudWatch</li>
-        <li><strong>Scripting:</strong> Shell, Python</li>
-        <li><strong>VCS:</strong> Git, GitHub, GitLab, Bitbucket</li>
-        <li><strong>CI/CD:</strong> Jenkins, GitHub Actions</li>
-        <li><strong>OS:</strong> Linux (CentOS), Windows</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <p><strong>B.Tech in EEE</strong><br />
-        Swami Ramananda Teertha Institute of Science & Technology – 8.4 CGPA (2021)</p>
-      <p><strong>Intermediate</strong><br />
-        Gowthami Junior College – 97.2% (2017)</p>
-      <p><strong>SSC</strong><br />
-        Krishnaveni Talent School – 9.8 CGPA (2015)</p>
-    </section>
-  </div>
-</body>
-
-</html>
+      <

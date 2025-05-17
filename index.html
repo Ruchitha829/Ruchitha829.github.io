@@ -1,78 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ruchitha Portfolio</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(-45deg, #dbeafe, #e0f2fe, #f0fdf4, #fdf2f8);
+      font-family: Arial, sans-serif;
+      background: linear-gradient(-45deg, #f0f4f8, #e3f2fd, #e8f5e9, #f3e5f5);
       background-size: 400% 400%;
-      animation: gradient 20s ease infinite;
-      color: #1e293b;
+      animation: gradientBG 20s ease infinite;
+      color: #111827;
     }
-
-    @keyframes gradient {
+    @keyframes gradientBG {
       0% {background-position: 0% 50%;}
       50% {background-position: 100% 50%;}
       100% {background-position: 0% 50%;}
     }
-
     .container {
       display: flex;
       flex-wrap: wrap;
-      max-width: 1200px;
-      margin: auto;
-      padding: 30px;
+      padding: 40px;
     }
-
     .left, .right {
       flex: 1;
-      min-width: 350px;
+      min-width: 300px;
       padding: 20px;
     }
-
     h1 {
       font-size: 36px;
-      color: #0f172a;
       margin-bottom: 10px;
+      color: #1d4ed8;
     }
-
     h2 {
-      color: #1e40af;
+      color: #1f2937;
       border-bottom: 2px solid #6366f1;
       padding-bottom: 5px;
       margin-top: 30px;
     }
-
-    p, li {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
     ul {
       list-style: disc;
       margin-left: 20px;
     }
-
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     .skills-bar {
       background: #e5e7eb;
       border-radius: 10px;
       overflow: hidden;
       margin-bottom: 10px;
     }
-
     .skills-bar span {
       display: block;
       height: 20px;
@@ -83,10 +59,15 @@
       border-radius: 10px;
       animation: growBar 2s ease-out;
     }
-
     @keyframes growBar {
-      from {width: 0%;}
-      to {width: 100%;}
+      from {width: 0%;} to {width: 100%;}
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -99,7 +80,7 @@
       <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank">Ruchitha Profile</a></p>
 
       <h2>Career Objective</h2>
-      <p>Aspiring DevOps and SRE professional with a strong background in Linux, AWS, automation, and infrastructure as code. Eager to contribute to scalable deployments and maintain high system availability.</p>
+      <p>Detail-oriented and proactive DevOps/SRE enthusiast skilled in AWS, Linux, CI/CD, scripting, and cloud infrastructure. Passionate about automating workflows, optimizing system reliability, and delivering scalable deployments.</p>
 
       <h2>Skills</h2>
       <div class="skills-bar"><span style="width: 90%">Linux</span></div>
@@ -112,50 +93,56 @@
 
     <div class="right">
       <h2>Experience</h2>
-      <p><strong>OnPassive Pvt Ltd</strong> – Associate Cloud Engineer<br><em>July 2023 – March 2025</em></p>
+      <p><strong>OnPassive Private Limited</strong> – Associate Cloud Engineer<br><em>July 2023 – March 2025</em></p>
       <ul>
-        <li>Built CI/CD pipelines using GitHub Actions and Jenkins for multiple environments.</li>
-        <li>Provisioned cloud infrastructure with Terraform, ensuring repeatable deployments.</li>
-        <li>Managed EC2 instances, S3 buckets, IAM roles, and security groups.</li>
-        <li>Monitored logs and metrics using AWS CloudWatch and custom Bash scripts.</li>
-        <li>Deployed LAMP stacks and containerized apps using Docker.</li>
-        <li>Handled on-call duties, triaged incidents, and created root cause analysis reports.</li>
+        <li>Developed and maintained CI/CD pipelines with GitHub Actions and Jenkins.</li>
+        <li>Monitored infrastructure using CloudWatch, Prometheus, and custom scripts.</li>
+        <li>Configured and maintained AWS resources including EC2, IAM, S3, VPCs.</li>
+        <li>Automated deployment using Ansible, Terraform, and Bash.</li>
+        <li>Handled system performance tuning and automated backup strategies.</li>
+        <li>Participated in incident management and root cause analysis.</li>
       </ul>
 
       <h2>Projects</h2>
-
-      <p><strong>LAMP Auto Deploy</strong> – Automated Web Stack Deployment</p>
-      <ul>
-        <li>Provisioned LAMP stack using Ansible on AWS EC2 instances.</li>
-        <li>Configured SSL and DNS using Route53 and Certbot.</li>
-        <li>Enabled CI/CD pipeline via GitHub Actions.</li>
-        <li>Dockerized the application for modular deployment.</li>
-      </ul>
-
-      <p><strong>System Resource Monitor</strong> – Resource Monitoring with Slack Alerts</p>
-      <ul>
-        <li>Built Bash script to monitor CPU, memory, disk usage on Linux.</li>
-        <li>Scheduled cron jobs for daily system health reports.</li>
-        <li>Integrated with Slack to send real-time alerts.</li>
-      </ul>
-
-      <p><strong>User Process Tracker</strong> – Secure User Monitoring Tool</p>
+      <p><strong>User Process Tracker</strong> – Linux user monitoring tool<br><em>Technologies: Bash, Linux</em></p>
       <ul>
         <li>Tracked logged-in users and their background processes.</li>
-        <li>Generated timestamped logs for security compliance.</li>
-        <li>Enhanced audit trail capabilities for Linux systems.</li>
+        <li>Generated secure logs for audit compliance.</li>
+        <li>Improved visibility into user activity for security teams.</li>
       </ul>
 
-      <p><strong>AWS DevOps Infrastructure</strong> – Scalable and Secure Cloud Setup</p>
+      <p><strong>System Resource Monitor</strong> – Shell-based system metrics monitor<br><em>Technologies: Bash, cron, Slack API</em></p>
       <ul>
-        <li>Provisioned infrastructure using Terraform with autoscaling and load balancing.</li>
-        <li>CI/CD pipelines integrated with GitHub Actions and Docker containers.</li>
-        <li>Implemented security best practices including IAM roles, SGs, and VPC setup.</li>
+        <li>Monitored CPU, memory, disk usage with alerts.</li>
+        <li>Daily report generation using cron jobs.</li>
+        <li>Integrated Slack alerts for system health notifications.</li>
+      </ul>
+
+      <p><strong>LAMP Auto Deploy with AWS</strong> – Automated stack provisioning<br><em>Technologies: AWS EC2, Apache, MySQL, PHP, Ansible</em></p>
+      <ul>
+        <li>Provisioned LAMP stack on AWS using shell and Ansible.</li>
+        <li>Integrated SSL, Route53, and GitHub CI/CD.</li>
+        <li>Containerized application for easy deployment.</li>
+      </ul>
+
+      <p><strong>AWS DevOps Infrastructure</strong> – Scalable infra project<br><em>Technologies: AWS, Terraform, GitHub Actions, Docker</em></p>
+      <ul>
+        <li>Deployed scalable infra using Terraform and EC2 autoscaling.</li>
+        <li>Implemented CI/CD with GitHub Actions and Docker containers.</li>
+        <li>Followed best practices for secure IAM and networking.</li>
+      </ul>
+
+      <p><strong>WordPress on LAMP with CI/CD</strong> – Scalable, automated blogging site<br><em>Technologies: WordPress, Apache, MySQL, PHP, AWS EC2, Ansible, GitHub Actions</em></p>
+      <ul>
+        <li>Automated deployment of a WordPress blog using Ansible on EC2 Linux instances.</li>
+        <li>Configured Apache VirtualHost for custom domain with HTTPS using Certbot.</li>
+        <li>Integrated GitHub CI/CD pipeline for automatic updates on theme and plugin changes.</li>
+        <li>Enabled persistent storage, firewall rules, and backup strategy.</li>
       </ul>
 
       <h2>Education</h2>
       <ul>
-        <li><strong>B.Tech in EEE</strong> – SRTIST, CGPA: 8.4 (2021)</li>
+        <li><strong>B.Tech (EEE)</strong> – SRTIST, 8.4 CGPA (2021)</li>
         <li><strong>Intermediate</strong> – Gowthami Jr. College, 97.2%</li>
         <li><strong>SSC</strong> – Krishnaveni Talent School, 9.8 CGPA</li>
       </ul>
@@ -169,13 +156,15 @@
 
       <h2>Interests</h2>
       <ul>
-        <li>Linux System Internals & Tuning</li>
-        <li>DevOps Automation and CI/CD</li>
-        <li>Cloud Infrastructure using AWS</li>
-        <li>Terraform & Infrastructure as Code</li>
-        <li>Monitoring with Prometheus, CloudWatch</li>
+        <li>Linux System Administration</li>
+        <li>DevOps & SRE Practices</li>
+        <li>Cloud Automation & IaC</li>
+        <li>Containerization with Docker/Kubernetes</li>
       </ul>
+
+      <h2>Declaration</h2>
+      <p>I hereby declare that the information provided above is true to the best of my knowledge.</p>
     </div>
-  </div>
+     </div>
 </body>
 </html>

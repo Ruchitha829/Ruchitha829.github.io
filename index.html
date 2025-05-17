@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ruchitha | DevOps & Linux Admin Engineer</title>
+  <title>Ruchitha R. | DevOps & Linux Admin Engineer</title>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw5q+u5hb7ieLlSm1Gtl3J6tBT92kSvds/3t4SB7A2PnFU9pFfljw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   />
   <style>
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -20,117 +24,130 @@
     body {
       display: flex;
       min-height: 100vh;
-      color: #1a1a1a;
-      background: linear-gradient(90deg, #d0f0ff 0%, #ffffff 100%);
-      overflow: hidden;
+      background: linear-gradient(90deg, #e6f0fa 0%, #f9fbff 100%);
+      color: #0d1f47;
       position: relative;
-      z-index: 0;
+      overflow: hidden;
     }
 
-    /* Animated background container */
-    #background-canvas {
+    /* Background canvas container */
+    #bg-canvas {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      z-index: -1;
-      background: #e3f2fd;
+      z-index: 0;
+      background-color: #e6f0fa;
     }
 
-    /* Left Panel */
+    /* Left panel styling */
     .left-panel {
-      width: 32%;
-      background-color: #90caf9; /* lighter bright blue */
-      padding: 2.5rem 2rem;
+      flex: 1 1 32%;
+      background-color: #a7c7ff;
+      padding: 3rem 2.5rem 3rem 3rem;
+      color: #102a60;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 1.4rem;
-      color: #0d47a1;
-      box-shadow: 3px 0 10px rgb(14 63 113 / 0.2);
+      justify-content: flex-start;
+      box-shadow: 4px 0 15px rgba(10, 30, 70, 0.2);
       position: relative;
       z-index: 1;
     }
 
     .left-panel h1 {
-      font-size: 2.6rem;
+      font-size: 3rem;
       font-weight: 700;
-      letter-spacing: 1.1px;
-      margin-bottom: 0.15rem;
-      color: #0d47a1;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1.2px;
+      color: #0b2a66;
     }
 
-    .left-panel .role-open {
-      font-size: 1.1rem;
+    .left-panel .roles {
+      font-size: 1.15rem;
       font-weight: 600;
-      color: #0b3d91;
-      margin-bottom: 1.2rem;
+      color: #0a2463;
+      margin-bottom: 2rem;
       line-height: 1.4;
-      font-style: italic;
-    }
-
-    .left-panel p {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-style: normal;
     }
 
     .left-panel strong {
-      color: #072f6b;
+      font-weight: 700;
+      color: #082157;
+    }
+
+    .left-panel p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
     }
 
     .left-panel ul {
       list-style-type: disc;
-      margin-left: 1.2rem;
-      margin-top: 0.4rem;
+      margin-left: 1.4rem;
+      margin-bottom: 1.6rem;
     }
 
     .left-panel ul li {
-      margin-bottom: 0.55rem;
+      margin-bottom: 0.6rem;
       font-weight: 500;
-      color: #093a9a;
+      color: #07316a;
     }
 
-    .left-panel .contact {
-      margin-top: 2.3rem;
-      border-top: 1px solid #0b3d91;
-      padding-top: 1.5rem;
-    }
-
-    .left-panel .contact p {
-      margin: 0.35rem 0;
+    /* Contact info */
+    .contact {
+      margin-top: auto;
+      border-top: 1.5px solid #0a2463;
+      padding-top: 1.7rem;
+      font-weight: 600;
       font-size: 1rem;
+      color: #082157;
+    }
+
+    .contact p {
       display: flex;
       align-items: center;
       gap: 0.7rem;
-      color: #07316a;
-      font-weight: 600;
+      margin-bottom: 1rem;
     }
 
-    .left-panel .contact p i {
-      color: #0b3d91;
-      font-size: 1.2rem;
-      width: 20px;
+    .contact p i {
+      font-size: 1.25rem;
+      color: #0a2463;
+      width: 22px;
       text-align: center;
     }
 
-    /* Right Panel */
+    .contact a {
+      color: #07316a;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Right panel styling */
     .right-panel {
-      width: 68%;
-      padding: 3rem 3.5rem 3rem 3rem;
-      overflow-y: auto;
+      flex: 1 1 68%;
+      background-color: #f9fbff;
+      padding: 3rem 4rem 3rem 3rem;
       color: #0d1f47;
+      overflow-y: auto;
       position: relative;
       z-index: 1;
     }
 
     h2 {
-      color: #1565c0;
-      margin-bottom: 0.6rem;
+      font-size: 2rem;
+      color: #164dbe;
+      margin-bottom: 0.8rem;
       font-weight: 700;
-      border-bottom: 2px solid #64b5f6;
-      padding-bottom: 0.25rem;
-      font-size: 1.8rem;
+      border-bottom: 3px solid #7eaaff;
+      padding-bottom: 0.3rem;
     }
 
     section {
@@ -138,20 +155,20 @@
     }
 
     ul {
-      padding-left: 1.4rem;
+      padding-left: 1.5rem;
       list-style-type: square;
     }
 
     ul li {
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.7rem;
       font-weight: 500;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
     }
 
     p {
-      font-size: 1.1rem;
-      line-height: 1.65;
-      margin-bottom: 0.9rem;
+      font-size: 1.12rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
       font-weight: 400;
     }
 
@@ -159,21 +176,21 @@
     .project-image {
       width: 100%;
       max-width: 700px;
-      margin-top: 0.7rem;
+      margin-top: 1rem;
       margin-bottom: 1.8rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgb(33 150 243 / 0.3);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgb(50 115 230 / 0.25);
       object-fit: contain;
     }
 
     /* Scrollbar for right panel */
     .right-panel::-webkit-scrollbar {
-      width: 10px;
+      width: 11px;
     }
 
     .right-panel::-webkit-scrollbar-thumb {
-      background-color: #64b5f6;
-      border-radius: 20px;
+      background-color: #7eaaff;
+      border-radius: 30px;
     }
 
     /* Responsive */
@@ -187,11 +204,12 @@
         height: auto;
       }
       .left-panel {
-        padding: 1.5rem 1.8rem;
+        padding: 2rem 2rem 2rem 2rem;
         text-align: center;
       }
       .left-panel .contact p {
         justify-content: center;
+        flex-wrap: wrap;
       }
       .right-panel {
         padding: 2rem 2rem 3rem 2rem;
@@ -201,45 +219,36 @@
 </head>
 
 <body>
-  <canvas id="background-canvas"></canvas>
+  <canvas id="bg-canvas"></canvas>
 
   <div class="left-panel">
     <h1>Ruchitha R.</h1>
-    <p class="role-open">
-      Open to roles in <strong>DevOps, SRE, Linux Administration, Cloud Support, Site Reliability</strong>
+    <p class="roles">
+      Linux Junior Administrator | Site Reliability Engineer (SRE) | DevOps Engineer | Cloud Support Engineer | Infrastructure Engineer | Automation Engineer | Build & Release Engineer
     </p>
 
     <p><strong>Career Objective:</strong><br />
-      Aspiring DevOps/SRE Engineer with strong experience in cloud infra, CI/CD, monitoring, and automation. Skilled in AWS, Linux, Python, and
-      Infrastructure as Code. Passionate about scalable, reliable, and automated systems.
+      Aspiring DevOps/SRE Engineer with hands-on experience in cloud infrastructure, CI/CD pipelines, monitoring, and automation. Proficient in AWS, Linux, Python, and Infrastructure as Code. Passionate about delivering reliable, scalable, and automated solutions.
     </p>
 
     <p><strong>Strengths:</strong></p>
     <ul>
-      <li>Excellent communication &amp; collaboration skills</li>
-      <li>Fast learner, quick adaptability to new environments</li>
-      <li>Strong problem-solving &amp; process improvement mindset</li>
-      <li>Proactive and passionate team player</li>
+      <li>Excellent communication & collaboration skills</li>
+      <li>Fast learner with strong adaptability to new technologies and environments</li>
+      <li>Analytical thinker with problem-solving and process optimization focus</li>
+      <li>Proactive and committed team player with a passion for continuous improvement</li>
     </ul>
 
     <div class="contact">
       <p><i class="fas fa-envelope"></i> ruchithakatakm99@gmail.com</p>
       <p><i class="fas fa-phone"></i> +91 6303476240 | +91 8340894285</p>
       <p><i class="fab fa-linkedin"></i>
-        <a
-          href="https://linkedin.com/in/ruchitha-r-423409274"
-          target="_blank"
-          style="color:#07316a; text-decoration:none;"
+        <a href="https://linkedin.com/in/ruchitha-r-423409274" target="_blank"
           >linkedin.com/in/ruchitha-r-423409274</a
         >
       </p>
       <p><i class="fab fa-github"></i>
-        <a
-          href="https://github.com/ruchitha829"
-          target="_blank"
-          style="color:#07316a; text-decoration:none;"
-          >github.com/ruchitha829</a
-        >
+        <a href="https://github.com/ruchitha829" target="_blank">github.com/ruchitha829</a>
       </p>
     </div>
   </div>
@@ -252,27 +261,5 @@
         <em>July 2023 – March 2025</em>
       </p>
       <ul>
-        <li>Designed and maintained CI/CD pipelines using Jenkins, GitHub Actions</li>
-        <li>Monitored server and application performance using CloudWatch, Prometheus, and Nagios</li>
-        <li>Managed AWS infrastructure including EC2, S3, IAM, VPC, and CloudFormation</li>
-        <li>Automated server provisioning and tasks with Shell scripting and Python</li>
-        <li>Implemented Infrastructure as Code with Terraform and Ansible for repeatable deployments</li>
-        <li>Collaborated with dev teams to integrate DevOps best practices into SDLC</li>
-        <li>Participated in incident response, root cause analysis, and on-call rotations</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-
-      <p>
-        <strong>LAMP-Auto-Deploy</strong><br />
-        Automated LAMP stack deployment using Ansible and shell scripting, enabling fast, consistent environment setups.
-      </p>
-      <img
-        src="https://raw.githubusercontent.com/ruchitha829/Ruchitha829.github.io/main/images/lamp.png"
-        alt="LAMP Auto Deploy"
-        class="project-image"
-      />
-
-      <
+        <li>Designed and maintained CI/CD pipelines using Jenkins, GitHub Actions, and GitLab CI</li>
+        <li>Monitored application and server performance with Amazon CloudWatch, Prometheus, and Nagios</

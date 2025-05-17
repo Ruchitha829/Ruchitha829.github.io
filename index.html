@@ -3,178 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ruchitha's Portfolio</title>
+  <title>Ruchitha | DevOps & SRE Engineer</title>
   <style>
+    /* Reset and basic styles */
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9fafb;
+      background-color: #f9f9f9;
+      color: #222;
       margin: 0;
       padding: 0;
-      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     header {
-      background: #4b6cb7; /* blue gradient */
-      background: linear-gradient(135deg, #4b6cb7, #182848);
+      background-color: #004080;
       color: white;
+      padding: 1rem 2rem;
       text-align: center;
-      padding: 40px 20px;
-    }
-    header img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 0 15px rgba(75, 108, 183, 0.7);
     }
     header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      letter-spacing: 2px;
+      margin: 0.3rem 0;
+      font-weight: 700;
     }
     header p {
-      margin: 10px 0 0;
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: #d1d9ff;
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
     }
-    main {
+    .container {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     section {
-      margin-bottom: 40px;
+      margin-bottom: 3rem;
+      background: white;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+      border-radius: 6px;
     }
     h2 {
-      color: #4b6cb7;
-      border-bottom: 3px solid #4b6cb7;
-      padding-bottom: 6px;
-      margin-bottom: 20px;
-      font-weight: 700;
-      letter-spacing: 1.1px;
-    }
-    p {
-      line-height: 1.6;
-      font-size: 1.1rem;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: #004080;
     }
     ul {
-      list-style-type: square;
-      margin-left: 20px;
+      padding-left: 1.2rem;
     }
     ul li {
-      margin-bottom: 10px;
-      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
     }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    .contact-info {
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
     }
-    .skill {
-      background: #182848;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 1rem;
-      box-shadow: 0 0 8px #4b6cb7;
-      transition: background 0.3s ease;
-    }
-    .skill:hover {
-      background: #4b6cb7;
-      cursor: default;
-    }
-    .projects ul {
-      padding-left: 0;
-    }
-    .projects li {
-      background: #e7ecff;
-      margin-bottom: 15px;
-      padding: 15px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgb(75 108 183 / 0.2);
-      font-weight: 600;
+    .contact-info span {
+      display: block;
+      margin: 0.15rem 0;
     }
     footer {
-      background: #182848;
-      color: white;
       text-align: center;
-      padding: 20px 10px;
-      font-size: 0.95rem;
-      margin-top: 40px;
-      letter-spacing: 0.7px;
-    }
-    footer a {
-      color: #4b6cb7;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    footer a:hover {
-      text-decoration: underline;
+      font-size: 0.85rem;
+      padding: 1rem 0;
+      background: #004080;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="images/profile.jpg" alt="Ruchitha's Photo" />
-    <h1>Ruchitha Katakam</h1>
-    <p>Linux Admin | AWS | DevOps | SRE | Junior Admin | Python | SQL</p>
-  </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Experienced Associate Cloud Engineer with hands-on skills in server monitoring, application deployment, and cloud infrastructure management. Completed comprehensive courses in Linux administration and AWS. Passionate about Linux system administration, DevOps practices, cloud computing, and site reliability engineering. Open to junior roles in Linux administration, AWS, DevOps, and SRE domains where I can apply my technical skills and continue growing professionally.
-      </p>
-    </section>
+<header>
+  <h1>Ruchitha</h1>
+  <p>Aspiring DevOps & Site Reliability Engineer (SRE)</p>
+  <p>
+    <a href="https://linkedin.com/in/ruchitha-r-423409274" target="_blank" rel="noopener noreferrer">LinkedIn</a> |  
+    <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a> |  
+    Mobile: +91 63034 76240 / +91 83408 94285
+  </p>
+</header>
 
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <div class="skills">
-        <span class="skill">Linux Administration</span>
-        <span class="skill">SQL</span>
-        <span class="skill">Python</span>
-        <span class="skill">AWS</span>
-        <span class="skill">Docker</span>
-        <span class="skill">Kubernetes</span>
-        <span class="skill">Jenkins</span>
-        <span class="skill">CI/CD Pipelines</span>
-      </div>
-    </section>
+<div class="container">
 
-    <section id="experience">
-      <h2>Professional Experience</h2>
-      <ul>
-        <li>
-          <strong>Associate Cloud Engineer at OnPassive</strong><br />
-          Responsible for monitoring server health, managing basic application deployments, and supporting cloud infrastructure operations.
-        </li>
-      </ul>
-    </section>
+  <section id="career-objective">
+    <h2>Career Objective</h2>
+    <p>Aspiring DevOps / Site Reliability Engineer (SRE) with hands-on experience in cloud infrastructure management, server monitoring, and CI/CD pipeline automation. Proficient in AWS, Linux, Shell Scripting, and Python, with practical knowledge of infrastructure automation and cloud-native tools. Experienced in real-time server health monitoring, log analysis, and deployment automation using CI/CD pipelines. Skilled in implementing DevOps best practices, maintaining system uptime, and enabling scalable, reliable deployments. Passionate about SRE principles, including incident response, observability, and automating toil. Eager to contribute to dynamic and high-performance DevOps/SRE teams.</p>
+  </section>
 
-    <section id="education-certifications">
-      <h2>Education & Certifications</h2>
-      <ul>
-        <li>Completed AWS Certified Solutions Architect course</li>
-        <li>Completed Linux Administration course on Udemy</li>
-      </ul>
-    </section>
+  <section id="work-experience">
+    <h2>Work Experience</h2>
+    <h3>OnPassive Private Limited</h3>
+    <p><strong>Associate Cloud Engineer</strong> | July 2023 – Present</p>
+    <ul>
+      <li>Designed and maintained CI/CD pipelines using Jenkins, Git, and GitHub Actions to automate build, test, and deployment workflows.</li>
+      <li>Monitored application and server performance with Amazon CloudWatch, Nagios, and Prometheus; configured alerting and logging for proactive issue detection.</li>
+      <li>Managed AWS cloud infrastructure (EC2, S3, IAM, VPC, CloudFormation) to enable scalable and secure environments.</li>
+      <li>Automated server provisioning, configuration, and maintenance tasks using Shell Scripting and Python, improving deployment speed and consistency.</li>
+      <li>Implemented Infrastructure as Code (IaC) with Terraform and Ansible for repeatable, version-controlled environment provisioning.</li>
+      <li>Collaborated with development teams to integrate DevOps practices into SDLC, supporting agile methodologies and continuous delivery.</li>
+      <li>Participated in on-call rotations, conducted incident response, and performed root cause analysis to improve system reliability and reduce MTTR.</li>
+      <li>Authored detailed documentation for deployment processes, system monitoring, and incident resolution to facilitate knowledge sharing and onboarding.</li>
+    </ul>
+  </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>LAMP-Auto-Deploy:</strong> Automated deployment script for LAMP stack (Linux, Apache, MariaDB, PHP) on CentOS 9.</li>
-        <li><strong>System Monitor:</strong> Bash script to monitor system resources such as CPU, memory, and disk usage.</li>
-        <li><strong>User Process Tracker:</strong> Tool to track logged-in users and their active processes on Linux servers.</li>
-      </ul>
-    </section>
-  </main>
+  <section id="technical-skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Cloud & Infrastructure:</strong> AWS (EC2, ELB, SNS, CloudFormation, Auto Scaling, CloudFront, S3, Elastic Beanstalk)</li>
+      <li><strong>DevOps Tools:</strong> Docker, Jenkins, Kubernetes, Ansible, Terraform</li>
+      <li><strong>Version Control:</strong> Git, GitHub, GitLab, Bitbucket</li>
+      <li><strong>CI/CD:</strong> Jenkins, GitHub Actions</li>
+      <li><strong>Build Tools:</strong> Maven</li>
+      <li><strong>Operating Systems:</strong> Linux, Windows</li>
+      <li><strong>Programming Languages:</strong> Python, C, Java, JavaScript</li>
+      <li><strong>Office Tools:</strong> MS Office (Outlook, Word, Excel, PowerPoint)</li>
+    </ul>
+  </section>
 
-  <footer>
-    &copy; 2025 Ruchitha &nbsp; | &nbsp; Email: <a href="mailto:ruchithakatakam99@gmail.com">ruchithakatakam99@gmail.com</a>
-  </footer>
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>B.Tech in Electrical and Electronics Engineering</strong></p>
+    <p>Swami Ramananda Teertha Institute of Science and Technology — July 2021 | CGPA: 8.4</p>
+    <p><strong>Intermediate (Class 12)</strong></p>
+    <p>Gowthami Junior College — May 2017 | 97.2%</p>
+    <p><strong>S.S.C (Class 10)</strong></p>
+    <p>Krishnaveni Talent School — May 2015 | CGPA: 9.8</p>
+  </section>
+
+  <section id="strengths">
+    <h2>Strengths</h2>
+    <ul>
+      <li>Strong communication and interpersonal skills</li>
+      <li>Effective inter-team coordination and management</li>
+      <li>Quick learner and adaptive to new technologies and work environments</li>
+    </ul>
+  </section>
+
+  <section id="personal-details">
+    <h2>Personal Details</h2>
+    <p><strong>Date of Birth:</strong> 10-09-1999</p>
+    <p><strong>Languages Known:</strong> English, Hindi, Telugu</p>
+    <p><strong>Permanent Address:</strong> H No: 7-13A/3, Hanuman Nagar, Chandur, Hyderabad, Telangana - 508255</p>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2025 Ruchitha. All rights reserved.
+</footer>
+
 </body>
 </html>

@@ -1,179 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ruchitha Katakam - DevOps Engineer Portfolio</title>
-  <style>
-    /* Background animated gradient */
-    @keyframes gradientShift {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(-45deg, #004080, #0066cc, #3399ff, #66b2ff);
-      background-size: 400% 400%;
-      animation: gradientShift 20s ease infinite;
-      color: #222;
-      line-height: 1.6;
-    }
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ruchitha Katakam - DevOps Engineer Portfolio</title>
+<style>
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #004080, #0066cc, #3399ff);
+    overflow-x: hidden;
+    position: relative;
+    color: #222;
+  }
+  main {
+    position: relative;
+    max-width: 900px;
+    margin: 4rem auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 0 35px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+  h1, h2, h3 {
+    color: #004080;
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+  header p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #0066cc;
+    letter-spacing: 0.8px;
+  }
+  section {
+    margin-bottom: 2.5rem;
+  }
+  section > h2 {
+    border-bottom: 3px solid #0066cc;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  p, li, span {
+    font-size: 1rem;
+    color: #333;
+    white-space: pre-line;
+  }
+  ul {
+    padding-left: 1.3rem;
+    margin-top: 0.5rem;
+  }
+  ul li {
+    margin-bottom: 0.4rem;
+  }
+  .contact-info {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    color: #004080;
+    letter-spacing: 0.6px;
+  }
+  .contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 8px;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  .work-responsibilities ul {
+    list-style-type: disc;
+    margin-left: 1.7rem;
+  }
+  .personal-details span {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+    color: #f0f0f0;
+    margin-top: 3rem;
+    letter-spacing: 0.8px;
+  }
+  @media (max-width: 600px) {
     main {
-      max-width: 900px;
-      margin: 3rem auto;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 2.5rem 3rem;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+      padding: 2rem 1.5rem;
+      margin: 1.5rem;
     }
-
-    h1,
-    h2,
-    h3 {
-      color: #004080;
-      margin-bottom: 0.5rem;
-    }
-
     h1 {
-      font-size: 2.8rem;
-      letter-spacing: 2px;
-      text-align: center;
-      margin-bottom: 0.3rem;
+      font-size: 2rem;
     }
-
-    header p {
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      color: #0066cc;
-      letter-spacing: 0.8px;
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-    }
-
     section > h2 {
-      border-bottom: 3px solid #0066cc;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
     }
-
-    p,
-    li,
-    span {
-      font-size: 1rem;
-      color: #333;
+  }
+  .bubbles {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .bubble {
+    position: absolute;
+    bottom: -100px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation-timing-function: linear;
+    animation-name: rise;
+  }
+  .bubble:nth-child(1) {
+    width: 60px; height: 60px; left: 10%;
+    animation-duration: 25s; animation-delay: 0s;
+  }
+  .bubble:nth-child(2) {
+    width: 30px; height: 30px; left: 25%;
+    animation-duration: 20s; animation-delay: 5s;
+  }
+  .bubble:nth-child(3) {
+    width: 50px; height: 50px; left: 40%;
+    animation-duration: 30s; animation-delay: 2s;
+  }
+  .bubble:nth-child(4) {
+    width: 40px; height: 40px; left: 55%;
+    animation-duration: 28s; animation-delay: 7s;
+  }
+  .bubble:nth-child(5) {
+    width: 70px; height: 70px; left: 70%;
+    animation-duration: 26s; animation-delay: 3s;
+  }
+  .bubble:nth-child(6) {
+    width: 20px; height: 20px; left: 85%;
+    animation-duration: 22s; animation-delay: 10s;
+  }
+  @keyframes rise {
+    0% {
+      transform: translateY(0) translateX(0) scale(1);
+      opacity: 0.6;
     }
-
-    ul {
-      padding-left: 1.3rem;
-      margin-top: 0.5rem;
+    50% {
+      opacity: 0.8;
     }
-
-    ul li {
-      margin-bottom: 0.4rem;
+    100% {
+      transform: translateY(-110vh) translateX(30px) scale(1.2);
+      opacity: 0;
     }
-
-    .contact-info {
-      text-align: center;
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 3rem;
-      color: #004080;
-      letter-spacing: 0.6px;
-    }
-
-    .contact-info a {
-      color: #0066cc;
-      text-decoration: none;
-      font-weight: 700;
-      margin: 0 8px;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    .work-responsibilities ul {
-      list-style-type: disc;
-      margin-left: 1.7rem;
-    }
-
-    .personal-details span {
-      display: block;
-      margin-bottom: 0.3rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem 1rem;
-      font-size: 0.9rem;
-      color: #f0f0f0;
-      margin-top: 3rem;
-      letter-spacing: 0.8px;
-    }
-
-    @media (max-width: 600px) {
-      main {
-        padding: 2rem 1.5rem;
-        margin: 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      section > h2 {
-        font-size: 1.4rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
-
 <body>
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
   <main>
     <header>
-      <h1>RUCHITHA KATAKAM</h1>
+      <h1>RUCHITHA</h1>
       <p>
-        LinkedIn: <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank" rel="noopener">linkedin.com/in/ruchitha-r-423409274</a> |
+        LinkedIn: <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ruchitha-r-423409274</a> |
         Mobile: +91 6303476240 / +91 8340894285 |
         Email: <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a>
       </p>
     </header>
-
     <section id="career-objective">
       <h2>CAREER OBJECTIVE</h2>
-      <p>
-        Aspiring DevOps/Site Reliability Engineer (SRE) with hands-on experience in cloud infrastructure management, server monitoring, and CI/CD pipeline deployments. Proficient in AWS, Linux, Shell Scripting, and Python, with practical knowledge of infrastructure automation and cloud-native tooling. Successfully worked on a project involving real-time server health monitoring, log analysis, and deployment automation using CI/CD tools. Skilled in implementing DevOps practices, maintaining system uptime, and ensuring reliable and scalable deployments. Passionate about SRE principles, including incident response, observability, and eliminating toil through scripting and automation. Eager to contribute to high-performance DevOps/SRE teams in dynamic environments.
-      </p>
+      <p>Aspiring DevOps/Site Reliability Engineer (SRE) with hands-on experience in cloud infrastructure management, server monitoring, and CI/CD pipeline deployments. Proficient in AWS, Linux, Shell Scripting, and Python, with practical knowledge of infrastructure automation and cloud-native tooling. Successfully worked on a project involving real-time server health monitoring, log analysis, and deployment automation using CI/CD tools. Skilled in implementing DevOps practices, maintaining system uptime, and ensuring reliable and scalable deployments. Passionate about SRE principles, including incident response, observability, and eliminating toil through scripting and automation. Eager to contribute to high-performance DevOps/SRE teams in dynamic environments.</p>
     </section>
-
     <section id="work-experience">
       <h2>WORK EXPERIENCE</h2>
       <h3>OnPassive Private Limited — Associate Cloud Engineer</h3>
-      <span><strong>Duration:</strong> July 2023 to Present</span>
+      <span><strong>Duration:</strong> July 2023 to March 2025</span>
       <div class="work-responsibilities">
         <ul>
-          <li>Designed and maintained CI/CD pipelines using Jenkins, Git, and GitHub Actions for automated build, test, and deployment workflows.</li>
+          <li>Designed and maintained CI/CD pipelines using tools like Jenkins, Git, and GitHub Actions for automated build, test, and deployment workflows.</li>
           <li>Monitored application and server performance using Amazon CloudWatch, Nagios, and Prometheus; configured alerting and logging for proactive issue detection.</li>
           <li>Managed cloud infrastructure using AWS services such as EC2, S3, IAM, VPC, and CloudFormation, enabling scalable and secure environments.</li>
           <li>Automated server provisioning, configuration, and maintenance tasks using Shell Scripting and Python, improving deployment speed and consistency.</li>
@@ -184,7 +207,6 @@
         </ul>
       </div>
     </section>
-
     <section id="technical-skills">
       <h2>TECHNICAL SKILLS</h2>
       <ul>
@@ -192,15 +214,14 @@
         <li>Good knowledge of AWS Cloud Resources (Auto Scaling, CloudFront, S3, Elastic Beanstalk)</li>
         <li>DevOps Tools: Docker, Jenkins, Kubernetes</li>
         <li>Build Management: Maven</li>
-        <li>Version Control System: GIT, GitHub, GitLab, Bitbucket</li>
+        <li>Version Control Systems: GIT, GitHub, GitLab, Bitbucket</li>
         <li>Continuous Integration: Jenkins</li>
-        <li>Configuration Management Systems: Ansible</li>
+        <li>Management Systems: Ansible</li>
         <li>Operating Systems: Windows, Linux</li>
         <li>MS Office Tools: Outlook, Word, Excel, PowerPoint</li>
         <li>Programming Languages: Python, C, Java, JavaScript</li>
       </ul>
     </section>
-
     <section id="qualifications">
       <h2>QUALIFICATIONS</h2>
       <ul>
@@ -209,36 +230,25 @@
         <li>S.S.C from Krishnaveni Talent School with 9.8 CGPA (May 2015)</li>
       </ul>
     </section>
-
     <section id="strengths">
       <h2>STRENGTHS</h2>
       <ul>
         <li>Good communication and interpersonal skills, inter-team management</li>
         <li>Ability to learn new technologies quickly</li>
-        <li>Quickly adapt to different work environments</li>
+        <li>Adaptability to different work environments</li>
       </ul>
     </section>
-
-    <section id="personal-details">
+    <section id="personal-details" class="personal-details">
       <h2>PERSONAL DETAILS</h2>
       <span><strong>Date of Birth:</strong> 10-09-1999</span>
-      <span><strong>Languages Known:</strong> English, Hindi, Telugu</span>
-      <span><strong>Permanent Address:</strong> H No: -7-13A/3, Hanuman Nagar, Chandur, Hyderabad, Telangana</span>
-      <span><strong>PIN Code:</strong> 508255</span>
-    </section>
+      <span><strong>Languages Known:</strong> English, Hindi, and Telugu</span>
+      <span><strong>Nationality:</strong> Indian</span>
+<span><strong>Address:</strong> H.No: 5-91, Kesaram, Suryapet (District)</span>
+<span><strong>PIN Code:</strong> 508255</span>
+</section>
+<section id="declaration">
+<h2>DECLARATION</h2>
+<p>I hereby state and declare that the above information furnished is correct to the best of my knowledge and belief and I am solemnly responsible for the above stated facts.</p>
+</section>
 
-    <section id="declaration">
-      <h2>DECLARATION</h2>
-      <p>
-        I hereby declare that the information furnished above is true to the best of my knowledge and belief.
-      </p>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>© 2025 Ruchitha Katakam. All rights reserved.</p>
-  </footer>
-</body>
-
-</html>
+</main> <footer> &copy; 2025 Ruchitha Katakam | Professional Portfolio </footer> </body> </html> ```

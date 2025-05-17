@@ -8,28 +8,49 @@
   body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(-45deg, #bbdefb, #e3f2fd, #b2ebf2, #e0f7fa);
+    background: linear-gradient(-45deg, #e1f5fe, #fffde7, #e0f7fa, #f1f8e9);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    color: #102027;
+    animation: gradientBG 20s ease infinite;
+    color: #263238;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
   }
+
   @keyframes gradientBG {
     0% {background-position:0% 50%;}
     50% {background-position:100% 50%;}
     100% {background-position:0% 50%;}
   }
 
+  .floating {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    animation: float 10s ease-in-out infinite;
+  }
+
+  .circle1 { width: 120px; height: 120px; background: #0288d1; top: 10%; left: 5%; animation-delay: 0s; }
+  .circle2 { width: 80px; height: 80px; background: #ffd600; top: 40%; left: 90%; animation-delay: 4s; }
+  .circle3 { width: 100px; height: 100px; background: #00acc1; top: 75%; left: 3%; animation-delay: 2s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+  }
+
   .container {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 60px auto;
     display: flex;
     gap: 30px;
     padding: 20px;
+    z-index: 2;
+    position: relative;
   }
 
   .left, .right {
-    background: #ffffffee;
+    background: #ffffffdd;
     border-radius: 14px;
     padding: 30px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
@@ -41,9 +62,9 @@
   .left h1 {
     margin: 0 0 20px 0;
     font-size: 38px;
-    color: #01579b;
+    color: #0d47a1;
     letter-spacing: 1.2px;
-    border-bottom: 2px solid #0288d1;
+    border-bottom: 2px solid #42a5f5;
     padding-bottom: 10px;
   }
 
@@ -52,11 +73,13 @@
     margin: 6px 0;
     color: #37474f;
   }
+
   .contact-info a {
     text-decoration: none;
     font-weight: 600;
     color: #0288d1;
   }
+
   .contact-info a:hover {
     text-decoration: underline;
   }
@@ -75,6 +98,7 @@
     list-style-type: disc;
     color: #263238;
   }
+
   ul li {
     margin-bottom: 10px;
     line-height: 1.6;
@@ -87,20 +111,23 @@
   .skill {
     margin-bottom: 18px;
   }
+
   .skill-name {
     margin-bottom: 5px;
     font-weight: 600;
     color: #37474f;
   }
+
   .progress-container {
     width: 100%;
     background-color: #cfd8dc;
     border-radius: 10px;
     overflow: hidden;
   }
+
   .progress {
     height: 14px;
-    background-color: #0288d1;
+    background-color: #039be5;
     width: 0;
     border-radius: 10px;
     transition: width 2s ease;
@@ -115,6 +142,9 @@
 </style>
 </head>
 <body>
+<div class="circle1 floating"></div>
+<div class="circle2 floating"></div>
+<div class="circle3 floating"></div>
 <div class="container">
   <div class="left">
     <h1>RUCHITHA</h1>
@@ -126,20 +156,44 @@
     </div>
     <section>
       <h2>Career Objective</h2>
-      <p>Aspiring DevOps Engineer with practical experience in Linux, cloud infrastructure, and automation. Passionate about building scalable systems, improving deployment processes, and exploring cloud-native technologies.</p>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>LAMP Auto Deploy</strong><br/>- Automated Apache, MySQL, PHP setup using Ansible and Shell scripts.<br/>- Enabled quick and consistent server provisioning across environments.<br/>- Configured firewall, virtual host, and service validations.<br/>- Integrated Docker containerization and deployed app via GitHub Actions CI/CD pipeline.<br/>- Set up custom domain using Route 53 and secured with Let's Encrypt SSL.</li>
-        <li><strong>System Resource Monitor</strong><br/>- Developed a lightweight Bash tool for real-time CPU and memory tracking.<br/>- Integrated Slack and email notifications for critical alerts.<br/>- Scheduled via crontab for automated health reporting.</li>
-        <li><strong>User Process Tracker</strong><br/>- Monitored and logged user login activities and background processes.<br/>- Improved system compliance and accountability for user actions.<br/>- Produced audit logs and alerts for anomalies.</li>
-        <li><strong>AWS DevOps Infra</strong><br/>- Provisioned complete infra using Terraform and deployed apps via CI/CD.<br/>- Leveraged GitHub Actions, Docker, and EC2 autoscaling.<br/>- Implemented centralized logging and security rules.</li>
-      </ul>
+      <p>Aspiring DevOps Engineer skilled in Linux, AWS, automation, and deployment pipelines. Looking to contribute to modern DevOps practices and deliver efficient cloud-native solutions.</p>
     </section>
   </div>
 
   <div class="right">
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>LAMP Auto Deploy</strong>
+          <ul>
+            <li>Automated Apache, MySQL, PHP stack with Ansible and shell.</li>
+            <li>Integrated Docker and CI/CD via GitHub Actions.</li>
+            <li>Configured domain and SSL with Route53 & Let's Encrypt.</li>
+          </ul>
+        </li>
+        <li><strong>System Resource Monitor</strong>
+          <ul>
+            <li>Bash-based monitor for CPU & memory usage.</li>
+            <li>Alert notifications via Slack and email.</li>
+            <li>Automated reporting with crontab scheduling.</li>
+          </ul>
+        </li>
+        <li><strong>User Process Tracker</strong>
+          <ul>
+            <li>Tracks user logins and background processes.</li>
+            <li>Improves compliance with audit-ready logs.</li>
+          </ul>
+        </li>
+        <li><strong>AWS DevOps Infra</strong>
+          <ul>
+            <li>Terraform-based infra provisioning.</li>
+            <li>Dockerized app deployment with autoscaling.</li>
+            <li>Logging and monitoring integrated.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
     <section>
       <h2>Skills</h2>
       <div class="skill"><div class="skill-name">AWS Cloud</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
@@ -147,16 +201,6 @@
       <div class="skill"><div class="skill-name">Terraform & Ansible</div><div class="progress-container"><div class="progress" style="width: 75%;"></div></div></div>
       <div class="skill"><div class="skill-name">Docker & Kubernetes</div><div class="progress-container"><div class="progress" style="width: 70%;"></div></div></div>
       <div class="skill"><div class="skill-name">Python & Bash</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
-    </section>
-
-    <section>
-      <h2>Work Experience</h2>
-      <p><strong>OnPassive Pvt Ltd</strong> — Associate Cloud Engineer<br/><em>Jul 2023 – Mar 2025</em></p>
-      <ul>
-        <li>Designed automated CI/CD pipelines and monitored deployments with Prometheus and CloudWatch.</li>
-        <li>Worked on infrastructure provisioning using Terraform, Ansible, and AWS services.</li>
-        <li>Streamlined development workflows and improved delivery speed by 40%.</li>
-      </ul>
     </section>
 
     <section>
@@ -169,6 +213,16 @@
     </section>
 
     <section>
+      <h2>Work Experience</h2>
+      <p><strong>OnPassive Pvt Ltd</strong> — Associate Cloud Engineer<br/><em>Jul 2023 – Mar 2025</em></p>
+      <ul>
+        <li>Built CI/CD pipelines using Jenkins & GitHub Actions.</li>
+        <li>Provisioned infra with Terraform & Ansible.</li>
+        <li>Boosted deployment efficiency by 40% with automation.</li>
+      </ul>
+    </section>
+
+    <section>
       <h2>Interests</h2>
       <ul>
         <li>Cloud Automation & Scripting</li>
@@ -177,4 +231,21 @@
         <li>Open-source Contributions</li>
         <li>Infrastructure as Code (IaC)</li>
       </ul>
-    <
+    </section>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const progressBars = document.querySelectorAll('.progress');
+    progressBars.forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0%';
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 200);
+    });
+  });
+</script>
+</body>
+</html>

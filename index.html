@@ -5,20 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ruchitha | DevOps Portfolio</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      color: #fff;
-    }
-
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #1f1c2c, #928dab, #1f1c2c, #0f0c29);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      color: #fff;
     }
 
     .container {
@@ -32,21 +38,22 @@
 
     .left, .right {
       flex: 1;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.05);
       border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
     }
 
     .left {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      gap: 20px;
+      gap: 15px;
+      animation: float 6s ease-in-out infinite;
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 40px;
       color: #ffd700;
     }
 
@@ -58,8 +65,8 @@
     h2 {
       border-bottom: 2px solid #ffd700;
       padding-bottom: 5px;
-      margin-top: 30px;
-      font-size: 24px;
+      margin-top: 25px;
+      font-size: 22px;
       color: #ffd700;
     }
 
@@ -71,24 +78,44 @@
     .right section {
       margin-bottom: 30px;
     }
+
+    .highlight {
+      color: #00ffff;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="left">
       <h1>RUCHITHA</h1>
-      <p><strong>Email:</strong><br><a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
-      <p><strong>Mobile:</strong><br>+91 6303476240 / +91 8340894285</p>
-      <p><strong>LinkedIn:</strong><br><a href="https://www.linkedin.com/in/ruchitha-r-423409274" target="_blank">linkedin.com/in/ruchitha-r-423409274</a></p>
-      <p><strong>Date of Birth:</strong><br>10-09-1999</p>
-      <p><strong>Languages Known:</strong><br>English, Hindi, Telugu</p>
-      <p><strong>Address:</strong><br>H No: 7-13A/3, Hanuman Nagar, Chandur, Hyderabad, Telangana - 508255</p>
+      <p><strong>Email:</strong> <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
+      <p><strong>Mobile:</strong> +91 6303476240 / +91 8340894285</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ruchitha-r-423409274" target="_blank">linkedin.com/in/ruchitha-r-423409274</a></p>
+      <h2>Personal Details</h2>
+      <ul>
+        <li><strong>DOB:</strong> 10-09-1999</li>
+        <li><strong>Languages:</strong> English, Hindi, Telugu</li>
+        <li><strong>Address:</strong> H No: 7-13A/3, Hanuman Nagar, Chandur, Hyderabad, Telangana - 508255</li>
+      </ul>
     </div>
 
     <div class="right">
       <section>
         <h2>Career Objective</h2>
-        <p>Aspiring DevOps/Site Reliability Engineer (SRE) with hands-on experience in cloud infrastructure management, server monitoring, and CI/CD pipeline deployments. Proficient in AWS, Linux, Shell Scripting, and Python, with practical knowledge of infrastructure automation and cloud-native tooling.</p>
+        <p>Aspiring <span class="highlight">DevOps/Site Reliability Engineer (SRE)</span> with expertise in <span class="highlight">cloud infrastructure, CI/CD, observability</span>, and automation. Passionate about enhancing system reliability, scalability, and developer velocity.</p>
+      </section>
+
+      <section>
+        <h2>Key Interests</h2>
+        <ul>
+          <li>Cloud Native Technologies (AWS, Docker, Kubernetes)</li>
+          <li>Infrastructure as Code (Terraform, Ansible)</li>
+          <li>CI/CD & Release Automation (Jenkins, GitHub Actions)</li>
+          <li>Monitoring & Observability (Prometheus, Grafana, CloudWatch)</li>
+          <li>System Troubleshooting and Root Cause Analysis</li>
+          <li>Automation using Shell and Python scripting</li>
+        </ul>
       </section>
 
       <section>
@@ -97,45 +124,44 @@
         <p><strong>Role:</strong> Associate Cloud Engineer</p>
         <p><strong>Duration:</strong> July 2023 to March 2025</p>
         <ul>
-          <li>Designed and maintained CI/CD pipelines using Jenkins, Git, and GitHub Actions.</li>
-          <li>Monitored performance using CloudWatch, Nagios, and Prometheus.</li>
-          <li>Managed infrastructure using AWS (EC2, S3, IAM, VPC, CloudFormation).</li>
-          <li>Automated tasks with Shell Scripting and Python.</li>
-          <li>Used Terraform and Ansible for Infrastructure as Code.</li>
-          <li>Integrated DevOps practices with agile SDLC.</li>
-          <li>Handled incident response and root cause analysis.</li>
-          <li>Created detailed technical documentation.</li>
+          <li>Built and managed CI/CD pipelines using Jenkins and GitHub Actions.</li>
+          <li>Monitored services via CloudWatch, Prometheus, and Nagios with alerts.</li>
+          <li>Managed AWS infrastructure: EC2, IAM, VPC, ELB, CloudFormation.</li>
+          <li>Provisioned servers and automated deployments with Terraform and Ansible.</li>
+          <li>Collaborated with Dev teams for fast, reliable releases in Agile settings.</li>
+          <li>Wrote scripts in Shell and Python for automation and log processing.</li>
+          <li>Performed incident response with detailed documentation and RCA.</li>
         </ul>
       </section>
 
       <section>
         <h2>Technical Skills</h2>
         <ul>
-          <li><strong>AWS:</strong> EC2, ELB, SNS, CloudFormation, Auto Scaling, CloudFront, S3, Elastic Beanstalk</li>
-          <li><strong>DevOps Tools:</strong> Docker, Jenkins, Kubernetes</li>
-          <li><strong>Build Tools:</strong> Maven</li>
-          <li><strong>VCS:</strong> Git, GitHub, GitLab, Bitbucket</li>
-          <li><strong>Config Mgmt:</strong> Ansible</li>
-          <li><strong>OS:</strong> Windows, Linux</li>
-          <li><strong>Languages:</strong> Python, C, Java, JavaScript</li>
+          <li><strong>Cloud:</strong> AWS (EC2, S3, CloudFront, CloudFormation, Elastic Beanstalk)</li>
+          <li><strong>DevOps Tools:</strong> Jenkins, Docker, Kubernetes</li>
+          <li><strong>Version Control:</strong> Git, GitHub, GitLab, Bitbucket</li>
+          <li><strong>Build & Config:</strong> Maven, Ansible, Terraform</li>
+          <li><strong>Monitoring:</strong> Prometheus, CloudWatch, Nagios</li>
+          <li><strong>Languages:</strong> Python, Shell, Java, JavaScript, C</li>
+          <li><strong>OS:</strong> Linux, Windows</li>
         </ul>
       </section>
 
       <section>
         <h2>Education</h2>
         <ul>
-          <li>B.Tech (EEE) - Swami Ramananda Teertha IST, 8.4 CGPA (2021)</li>
-          <li>Intermediate - Gowthami Junior College, 97.2% (2017)</li>
-          <li>S.S.C - Krishnaveni Talent School, 9.8 CGPA (2015)</li>
+          <li><strong>B.Tech (EEE)</strong> – Swami Ramananda Teertha IST – CGPA: 8.4 (2021)</li>
+          <li><strong>Intermediate</strong> – Gowthami Junior College – 97.2% (2017)</li>
+          <li><strong>S.S.C</strong> – Krishnaveni Talent School – CGPA: 9.8 (2015)</li>
         </ul>
       </section>
 
       <section>
         <h2>Strengths</h2>
         <ul>
-          <li>Excellent communication and teamwork skills</li>
-          <li>Quick learner, adaptable to new technologies</li>
-          <li>Strong problem-solving and system analysis</li>
+          <li>Excellent communication and collaboration</li>
+          <li>Fast learner, proactive problem-solver</li>
+          <li>Passionate about automation and DevOps culture</li>
         </ul>
       </section>
     </div>

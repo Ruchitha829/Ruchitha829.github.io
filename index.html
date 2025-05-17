@@ -8,9 +8,9 @@
   body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(-45deg, #e3f2fd, #ffffff, #f1f8e9, #e0f7fa);
+    background: linear-gradient(-45deg, #dbeafe, #e0f7fa, #e3f2fd, #f1f8e9);
     background-size: 400% 400%;
-    animation: gradientBG 20s ease infinite;
+    animation: gradientBG 18s ease infinite;
     color: #102027;
     min-height: 100vh;
   }
@@ -21,33 +21,36 @@
   }
 
   .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 40px auto;
     display: flex;
-    gap: 40px;
+    gap: 30px;
     padding: 20px;
   }
 
   .left, .right {
-    background: #ffffffcc;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    background: #ffffffd9;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     flex: 1;
     display: flex;
     flex-direction: column;
   }
 
   .left h1 {
-    margin: 0 0 15px 0;
-    font-size: 36px;
+    margin: 0 0 20px 0;
+    font-size: 38px;
     color: #0077b6;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
+    border-bottom: 2px solid #0077b6;
+    padding-bottom: 10px;
   }
+
   .contact-info p, .contact-info a {
     font-size: 15px;
-    margin: 5px 0;
-    color: #102027;
+    margin: 6px 0;
+    color: #37474f;
   }
   .contact-info a {
     text-decoration: none;
@@ -60,34 +63,29 @@
 
   h2 {
     border-bottom: 2px solid #0077b6;
-    padding-bottom: 4px;
-    margin-bottom: 14px;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
     font-size: 22px;
     color: #0077b6;
-    letter-spacing: 1px;
   }
 
   ul {
     margin: 0;
-    padding-left: 18px;
-    list-style-type: disc;
+    padding-left: 20px;
+    list-style-type: square;
     color: #263238;
   }
   ul li {
-    margin-bottom: 8px;
-    line-height: 1.5;
+    margin-bottom: 10px;
+    line-height: 1.6;
   }
 
   .right section {
-    margin-bottom: 25px;
-  }
-
-  .project-list, .certifications-list, .interests-list {
-    padding-left: 18px;
+    margin-bottom: 30px;
   }
 
   .skill {
-    margin-bottom: 14px;
+    margin-bottom: 18px;
   }
   .skill-name {
     margin-bottom: 5px;
@@ -96,7 +94,7 @@
   }
   .progress-container {
     width: 100%;
-    background-color: #cfd8dc;
+    background-color: #e0e0e0;
     border-radius: 10px;
     overflow: hidden;
   }
@@ -117,9 +115,7 @@
 </style>
 </head>
 <body>
-
 <div class="container">
-  <!-- Left Column -->
   <div class="left">
     <h1>RUCHITHA</h1>
     <div class="contact-info">
@@ -128,65 +124,44 @@
       <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ruchitha-r-423409274" target="_blank">linkedin.com/in/ruchitha-r-423409274</a></p>
       <p><strong>GitHub:</strong> <a href="https://github.com/Ruchitha829" target="_blank">github.com/Ruchitha829</a></p>
     </div>
-
     <section>
       <h2>Career Objective</h2>
-      <p>Motivated and detail-oriented DevOps/SRE professional with expertise in AWS, automation, CI/CD, and cloud-native development. Seeking to leverage strong technical and collaborative skills to contribute to high-performing infrastructure and delivery teams.</p>
+      <p>Aspiring DevOps Engineer with practical experience in Linux, cloud infrastructure, and automation. Passionate about building scalable systems, improving deployment processes, and exploring cloud-native technologies.</p>
     </section>
-
     <section>
       <h2>Projects</h2>
-      <ul class="project-list">
-        <li><strong>LAMP Auto Deploy:</strong> Automated provisioning and deployment of a full LAMP stack using Ansible and shell scripts.</li>
-        <li><strong>System Monitor:</strong> Monitors system resources and sends notifications using Slack and email integration.</li>
-        <li><strong>User Process Tracker:</strong> Bash-based tool that logs and monitors logged-in users for auditing purposes.</li>
-        <li><strong>AWS DevOps Project:</strong> Built Terraform-based infrastructure for microservices with CI/CD using GitHub Actions and Docker containers on EC2.</li>
+      <ul>
+        <li><strong>LAMP Auto Deploy:</strong> Automated setup of Apache, MySQL, and PHP using Ansible and shell scripting for rapid deployment.</li>
+        <li><strong>System Resource Monitor:</strong> Created Bash-based tool to monitor CPU/memory usage and alert via Slack/email.</li>
+        <li><strong>User Process Tracker:</strong> Logged and audited login sessions and user activity for system compliance.</li>
+        <li><strong>AWS DevOps Infra:</strong> Built Terraform-based infra for microservices with GitHub Actions CI/CD, Docker, and EC2 autoscaling.</li>
       </ul>
     </section>
   </div>
 
-  <!-- Right Column -->
   <div class="right">
     <section>
       <h2>Skills</h2>
-      <div class="skill">
-        <div class="skill-name">AWS Cloud</div>
-        <div class="progress-container"><div class="progress" style="width: 85%;"></div></div>
-      </div>
-      <div class="skill">
-        <div class="skill-name">CI/CD (Jenkins, GitHub Actions)</div>
-        <div class="progress-container"><div class="progress" style="width: 80%;"></div></div>
-      </div>
-      <div class="skill">
-        <div class="skill-name">Infrastructure as Code (Terraform, Ansible)</div>
-        <div class="progress-container"><div class="progress" style="width: 75%;"></div></div>
-      </div>
-      <div class="skill">
-        <div class="skill-name">Containerization (Docker, Kubernetes)</div>
-        <div class="progress-container"><div class="progress" style="width: 70%;"></div></div>
-      </div>
-      <div class="skill">
-        <div class="skill-name">Scripting (Python, Bash)</div>
-        <div class="progress-container"><div class="progress" style="width: 85%;"></div></div>
-      </div>
+      <div class="skill"><div class="skill-name">AWS Cloud</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
+      <div class="skill"><div class="skill-name">CI/CD (Jenkins, GitHub Actions)</div><div class="progress-container"><div class="progress" style="width: 80%;"></div></div></div>
+      <div class="skill"><div class="skill-name">Terraform & Ansible</div><div class="progress-container"><div class="progress" style="width: 75%;"></div></div></div>
+      <div class="skill"><div class="skill-name">Docker & Kubernetes</div><div class="progress-container"><div class="progress" style="width: 70%;"></div></div></div>
+      <div class="skill"><div class="skill-name">Python & Bash</div><div class="progress-container"><div class="progress" style="width: 85%;"></div></div></div>
     </section>
 
     <section>
       <h2>Work Experience</h2>
-      <p><strong>OnPassive Pvt Ltd</strong> — Associate Cloud Engineer</p>
-      <p><em>Jul 2023 – Mar 2025</em></p>
+      <p><strong>OnPassive Pvt Ltd</strong> — Associate Cloud Engineer<br/><em>Jul 2023 – Mar 2025</em></p>
       <ul>
-        <li>Designed scalable CI/CD pipelines using Jenkins and GitHub Actions.</li>
-        <li>Monitored infrastructure with CloudWatch, Prometheus, and Nagios.</li>
-        <li>Managed AWS services including EC2, S3, VPC, IAM, CloudFormation.</li>
-        <li>Automated provisioning using Terraform and Ansible scripts.</li>
-        <li>Collaborated with Agile teams to improve deployment frequency and stability.</li>
+        <li>Designed automated CI/CD pipelines and monitored deployments with Prometheus and CloudWatch.</li>
+        <li>Worked on infrastructure provisioning using Terraform, Ansible, and AWS services.</li>
+        <li>Streamlined development workflows and improved delivery speed by 40%.</li>
       </ul>
     </section>
 
     <section>
       <h2>Certifications</h2>
-      <ul class="certifications-list">
+      <ul>
         <li>AWS Certified Solutions Architect – Associate</li>
         <li>Linux Foundation Certified System Administrator (LFCS)</li>
         <li>Docker Certified Associate (DCA)</li>
@@ -195,12 +170,12 @@
 
     <section>
       <h2>Interests</h2>
-      <ul class="interests-list">
-        <li>Cloud Infrastructure & Automation</li>
-        <li>Continuous Integration & Delivery</li>
-        <li>Monitoring & Alerting Systems</li>
-        <li>Container Orchestration</li>
-        <li>Infrastructure as Code</li>
+      <ul>
+        <li>Cloud Automation & Scripting</li>
+        <li>Containerization & DevOps Tooling</li>
+        <li>Monitoring & Observability</li>
+        <li>Open-source Contributions</li>
+        <li>Infrastructure as Code (IaC)</li>
       </ul>
     </section>
   </div>
@@ -214,10 +189,9 @@
       bar.style.width = '0%';
       setTimeout(() => {
         bar.style.width = width;
-      }, 100);
+      }, 200);
     });
   });
 </script>
-
 </body>
 </html>

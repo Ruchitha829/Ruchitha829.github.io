@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ruchitha's Portfolio</title>
+  <title>Ruchitha Katakam - DevOps Engineer Portfolio</title>
   <style>
-    /* Background animation */
+    /* Background animated gradient */
     @keyframes gradientShift {
       0% {
         background-position: 0% 50%;
@@ -25,274 +25,220 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(-45deg, #0066cc, #004080, #3399ff, #66b2ff);
+      background: linear-gradient(-45deg, #004080, #0066cc, #3399ff, #66b2ff);
       background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      color: #333;
-    }
-
-    header {
-      background-color: rgba(0, 102, 204, 0.85);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-    }
-
-    nav {
-      background-color: rgba(0, 64, 128, 0.85);
-      display: flex;
-      justify-content: center;
-      padding: 0.75rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1.5rem;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+      animation: gradientShift 20s ease infinite;
+      color: #222;
+      line-height: 1.6;
     }
 
     main {
       max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      background-color: rgba(255, 255, 255, 0.92);
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin: 3rem auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #004080;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      color: #0066cc;
+      letter-spacing: 0.8px;
     }
 
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
 
-    h2 {
+    section > h2 {
       border-bottom: 3px solid #0066cc;
       padding-bottom: 0.3rem;
       margin-bottom: 1rem;
-      color: #004080;
+      font-weight: 700;
+      font-size: 1.8rem;
     }
 
-    ul.skills-list {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-    }
-
-    ul.skills-list li {
-      background-color: #0066cc;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .project {
-      background-color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .project h3 {
-      margin-top: 0;
-      color: #004080;
-    }
-
-    .project p {
-      margin: 0.4rem 0 0;
-      line-height: 1.4;
-    }
-
-    .edu-exp {
-      background-color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .edu-exp h3 {
-      margin-top: 0;
-      color: #004080;
-    }
-
-    .edu-exp p,
-    .edu-exp span {
-      margin: 0.2rem 0;
-      display: block;
-      font-size: 0.95rem;
+    p,
+    li,
+    span {
+      font-size: 1rem;
       color: #333;
+    }
+
+    ul {
+      padding-left: 1.3rem;
+      margin-top: 0.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-info {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 3rem;
+      color: #004080;
+      letter-spacing: 0.6px;
+    }
+
+    .contact-info a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 700;
+      margin: 0 8px;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .work-responsibilities ul {
+      list-style-type: disc;
+      margin-left: 1.7rem;
+    }
+
+    .personal-details span {
+      display: block;
+      margin-bottom: 0.3rem;
     }
 
     footer {
       text-align: center;
-      padding: 1.5rem 1rem;
-      background-color: rgba(0, 102, 204, 0.85);
-      color: white;
+      padding: 1rem 1rem;
       font-size: 0.9rem;
-      margin-top: 2rem;
-      border-radius: 0 0 10px 10px;
-    }
-
-    footer a {
-      color: #ffec99;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+      color: #f0f0f0;
+      margin-top: 3rem;
+      letter-spacing: 0.8px;
     }
 
     @media (max-width: 600px) {
-      ul.skills-list {
-        flex-direction: column;
-        gap: 0.4rem;
+      main {
+        padding: 2rem 1.5rem;
+        margin: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      section > h2 {
+        font-size: 1.4rem;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Ruchitha</h1>
-    <p>DevOps Engineer | AWS | Terraform | CI/CD | Automation</p>
-  </header>
-
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <main>
-    <section id="about">
-      <h2>About Me</h2>
+    <header>
+      <h1>RUCHITHA KATAKAM</h1>
       <p>
-        DevOps Engineer passionate about automating infrastructure and streamlining deployment workflows.
-        Experienced in AWS, Terraform, Jenkins, Ansible, Docker, and Linux system administration. Skilled in
-        building scalable, secure, and cost-effective cloud environments with a strong focus on Infrastructure as
-        Code and CI/CD pipelines. Actively seeking opportunities in India to contribute and grow in dynamic tech
-        teams.
+        LinkedIn: <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank" rel="noopener">linkedin.com/in/ruchitha-r-423409274</a> |
+        Mobile: +91 6303476240 / +91 8340894285 |
+        Email: <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a>
+      </p>
+    </header>
+
+    <section id="career-objective">
+      <h2>CAREER OBJECTIVE</h2>
+      <p>
+        Aspiring DevOps/Site Reliability Engineer (SRE) with hands-on experience in cloud infrastructure management, server monitoring, and CI/CD pipeline deployments. Proficient in AWS, Linux, Shell Scripting, and Python, with practical knowledge of infrastructure automation and cloud-native tooling. Successfully worked on a project involving real-time server health monitoring, log analysis, and deployment automation using CI/CD tools. Skilled in implementing DevOps practices, maintaining system uptime, and ensuring reliable and scalable deployments. Passionate about SRE principles, including incident response, observability, and eliminating toil through scripting and automation. Eager to contribute to high-performance DevOps/SRE teams in dynamic environments.
       </p>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>AWS (EC2, S3, IAM, CloudFormation)</li>
-        <li>Terraform</li>
-        <li>Ansible</li>
-        <li>Jenkins</li>
-        <li>GitLab CI/CD</li>
-        <li>Docker</li>
-        <li>Kubernetes (basic)</li>
-        <li>Bash Scripting</li>
-        <li>Python</li>
-        <li>Prometheus</li>
-        <li>Grafana</li>
-        <li>ELK Stack</li>
-        <li>Git & GitHub</li>
-        <li>Linux (CentOS, Ubuntu)</li>
+    <section id="work-experience">
+      <h2>WORK EXPERIENCE</h2>
+      <h3>OnPassive Private Limited — Associate Cloud Engineer</h3>
+      <span><strong>Duration:</strong> July 2023 to Present</span>
+      <div class="work-responsibilities">
+        <ul>
+          <li>Designed and maintained CI/CD pipelines using Jenkins, Git, and GitHub Actions for automated build, test, and deployment workflows.</li>
+          <li>Monitored application and server performance using Amazon CloudWatch, Nagios, and Prometheus; configured alerting and logging for proactive issue detection.</li>
+          <li>Managed cloud infrastructure using AWS services such as EC2, S3, IAM, VPC, and CloudFormation, enabling scalable and secure environments.</li>
+          <li>Automated server provisioning, configuration, and maintenance tasks using Shell Scripting and Python, improving deployment speed and consistency.</li>
+          <li>Implemented Infrastructure as Code (IaC) practices using Terraform and Ansible to provision and manage environments in a repeatable and version-controlled manner.</li>
+          <li>Collaborated with software development teams to integrate DevOps practices into the SDLC, supporting agile methodologies and continuous delivery.</li>
+          <li>Participated in on-call rotations, conducted incident response and root cause analysis to improve system reliability and reduce mean time to recovery (MTTR).</li>
+          <li>Created detailed documentation for deployment procedures, system monitoring, and incident resolution to support knowledge sharing and team onboarding.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="technical-skills">
+      <h2>TECHNICAL SKILLS</h2>
+      <ul>
+        <li>Experience in EC2, Elastic Load Balancer, SNS, CloudFormation</li>
+        <li>Good knowledge of AWS Cloud Resources (Auto Scaling, CloudFront, S3, Elastic Beanstalk)</li>
+        <li>DevOps Tools: Docker, Jenkins, Kubernetes</li>
+        <li>Build Management: Maven</li>
+        <li>Version Control System: GIT, GitHub, GitLab, Bitbucket</li>
+        <li>Continuous Integration: Jenkins</li>
+        <li>Configuration Management Systems: Ansible</li>
+        <li>Operating Systems: Windows, Linux</li>
+        <li>MS Office Tools: Outlook, Word, Excel, PowerPoint</li>
+        <li>Programming Languages: Python, C, Java, JavaScript</li>
       </ul>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <h3>AWS Infrastructure Automation</h3>
-        <p>
-          Automated provisioning and management of AWS resources using Terraform and Ansible, reducing manual
-          configuration time by 50%. Implemented secure IAM policies and automated backups using AWS Lambda
-          functions.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>CI/CD Pipeline Setup with Jenkins</h3>
-        <p>
-          Designed and implemented automated build and deployment pipelines using Jenkins for containerized
-          microservices, improving deployment speed and reliability.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>Docker-Based Application Deployment</h3>
-        <p>
-          Containerized legacy applications using Docker, simplifying deployment and scaling processes on cloud
-          environments.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>Linux System Monitoring Tool</h3>
-        <p>
-          Developed a Bash script-based system resource monitor that tracks CPU, memory, disk, and network usage,
-          integrated with alert notifications.
-        </p>
-      </div>
+    <section id="qualifications">
+      <h2>QUALIFICATIONS</h2>
+      <ul>
+        <li>B.Tech in Electrical and Electronics Engineering from Swami Ramananda Teertha Institute of Science and Technology with 8.4 CGPA (July 2021)</li>
+        <li>Intermediate from Gowthami Junior College with 97.2% (May 2017)</li>
+        <li>S.S.C from Krishnaveni Talent School with 9.8 CGPA (May 2015)</li>
+      </ul>
     </section>
 
-    <section id="education">
-      <h2>Education</h2>
-
-      <div class="edu-exp">
-        <h3>Bachelor of Technology in Electrical Engineering</h3>
-        <span>XYZ University, India</span>
-        <span>2017 - 2021</span>
-      </div>
-
-      <div class="edu-exp">
-        <h3>Diploma in Linux Administration</h3>
-        <span>ABC Institute</span>
-        <span>2023</span>
-      </div>
+    <section id="strengths">
+      <h2>STRENGTHS</h2>
+      <ul>
+        <li>Good communication and interpersonal skills, inter-team management</li>
+        <li>Ability to learn new technologies quickly</li>
+        <li>Quickly adapt to different work environments</li>
+      </ul>
     </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-
-      <div class="edu-exp">
-        <h3>Associate Cloud Engineer - Onpassiv</h3>
-        <span>July 2023 - March 2025</span>
-        <p>Managed cloud infrastructure and automation scripts, ensuring smooth deployment and monitoring processes.</p>
-      </div>
-
-      <div class="edu-exp">
-        <h3>Internships & Projects</h3>
-        <p>Worked on various DevOps and automation projects during training and internships, including CI/CD pipeline setups and cloud resource management.</p>
-      </div>
+    <section id="personal-details">
+      <h2>PERSONAL DETAILS</h2>
+      <span><strong>Date of Birth:</strong> 10-09-1999</span>
+      <span><strong>Languages Known:</strong> English, Hindi, Telugu</span>
+      <span><strong>Permanent Address:</strong> H No: -7-13A/3, Hanuman Nagar, Chandur, Hyderabad, Telangana</span>
+      <span><strong>PIN Code:</strong> 508255</span>
     </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:ruchithakatakam99@gmail.com">ruchithakatakam99@gmail.com</a></p>
-      <p>Phone: +91-8340894285</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/ruchitha-r-423409274/" target="_blank" rel="noopener">linkedin.com/in/ruchitha-r-423409274</a></p>
-      <p>GitHub: <a href="https://github.com/ruchitha829" target="_blank" rel="noopener">github.com/ruchitha829</a></p>
+    <section id="declaration">
+      <h2>DECLARATION</h2>
+      <p>
+        I hereby declare that the information furnished above is true to the best of my knowledge and belief.
+      </p>
     </section>
+
   </main>
 
-  <
+  <footer>
+    <p>© 2025 Ruchitha Katakam. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

@@ -15,31 +15,45 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #111827;
+      background-color: #0f172a;
       color: #f1f5f9;
       display: flex;
       min-height: 100vh;
     }
 
     aside {
-      background-color: #1f2937;
+      background: url('images/devops-bg.jpg') no-repeat center center/cover;
       width: 30%;
       padding: 2rem;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
-      text-align: center;
+      text-align: left;
+      color: #f8fafc;
     }
 
-    aside h1 {
+    .profile {
+      background-color: rgba(15, 23, 42, 0.8);
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    .profile h1 {
       font-size: 2rem;
       color: #38bdf8;
       margin-bottom: 1rem;
     }
 
-    aside p {
-      margin-bottom: 1rem;
-      color: #cbd5e1;
+    .contact-info p {
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-info strong {
+      display: inline-block;
+      width: 90px;
+      color: #94a3b8;
     }
 
     aside a {
@@ -85,12 +99,18 @@
 
 <body>
   <aside>
-    <h1>Ruchitha</h1>
-    <p>DevOps & SRE Enthusiast</p>
-    <p><strong>Email:</strong><br> <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
-    <p><strong>Phone:</strong><br> +91 6303476240 / +91 8340894285</p>
-    <p><strong>LinkedIn:</strong><br><a href="https://linkedin.com/in/ruchitha-r-423409274">linkedin.com/in/ruchitha-r</a></p>
-    <p><strong>Location:</strong><br> Hyderabad, Telangana</p>
+    <div class="profile">
+      <h1>Ruchitha</h1>
+      <p><strong>Role:</strong> DevOps & SRE Enthusiast</p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
+        <p><strong>Phone:</strong> +91 6303476240 / +91 8340894285</p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ruchitha-r-423409274">ruchitha-r</a></p>
+        <p><strong>Location:</strong> Hyderabad, Telangana</p>
+        <p><strong>Languages:</strong> English, Hindi, Telugu</p>
+        <p><strong>DOB:</strong> 10-Sep-1999</p>
+      </div>
+    </div>
   </aside>
 
   <main>

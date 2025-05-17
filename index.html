@@ -9,8 +9,8 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(120deg, #e0f7fa, #ffffff);
-      background-size: 400% 400%;
+      background: linear-gradient(270deg, #f0f8ff, #e6f7ff, #d9f2e6);
+      background-size: 600% 600%;
       animation: gradientBG 20s ease infinite;
       color: #333;
     }
@@ -24,60 +24,71 @@
     .container {
       display: flex;
       flex-direction: row;
-      padding: 20px;
+      padding: 30px;
       max-width: 1200px;
       margin: auto;
-      gap: 20px;
+      gap: 30px;
     }
 
     .left, .right {
       flex: 1;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
     .left {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      gap: 10px;
+      justify-content: center;
+      gap: 15px;
     }
 
     h1 {
-      font-size: 28px;
-      color: #006064;
-    }
-
-    h2 {
-      border-bottom: 2px solid #00acc1;
-      padding-bottom: 4px;
-      margin-top: 20px;
-      font-size: 20px;
-      color: #004d40;
+      font-size: 36px;
+      color: #0077b6;
     }
 
     a {
-      color: #00796b;
+      color: #0077b6;
       text-decoration: none;
     }
 
+    h2 {
+      border-bottom: 2px solid #0077b6;
+      padding-bottom: 5px;
+      margin-top: 25px;
+      font-size: 22px;
+      color: #0077b6;
+    }
+
     ul {
-      list-style: disc;
+      list-style: square;
       padding-left: 20px;
     }
 
-    p, li {
-      font-size: 14px;
-      line-height: 1.6;
+    .right section {
+      margin-bottom: 20px;
+    }
+
+    .project-card {
+      background: #f9f9f9;
+      padding: 15px;
+      border-left: 5px solid #0077b6;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .project-card a {
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="left">
-      <h1>Ruchitha</h1>
+      <h1>RUCHITHA</h1>
       <p><strong>Email:</strong> <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
       <p><strong>Mobile:</strong> +91 6303476240 / +91 8340894285</p>
       <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ruchitha-r-423409274" target="_blank">linkedin.com/in/ruchitha-r-423409274</a></p>
@@ -86,63 +97,75 @@
     <div class="right">
       <section>
         <h2>Career Objective</h2>
-        <ul>
-          <li>DevOps/SRE enthusiast with real-world experience in automation, CI/CD, and monitoring tools.</li>
-          <li>Seeking to leverage my cloud and scripting knowledge to improve infrastructure scalability and reliability.</li>
-          <li>Strong interest in building efficient DevOps pipelines and observability frameworks.</li>
-        </ul>
+        <p>DevOps and Site Reliability Engineer (SRE) enthusiast with a strong foundation in cloud infrastructure, automation, and monitoring. Eager to contribute to scalable deployments and resilient systems by applying best DevOps practices and SRE principles.</p>
       </section>
 
       <section>
         <h2>Work Experience</h2>
         <p><strong>Company:</strong> OnPassive Private Limited</p>
         <p><strong>Role:</strong> Associate Cloud Engineer</p>
-        <p><strong>Duration:</strong> July 2023 – March 2025</p>
+        <p><strong>Duration:</strong> July 2023 to March 2025</p>
         <ul>
-          <li>Managed AWS resources including EC2, IAM, CloudFormation, and S3 for scalable deployments.</li>
-          <li>Created Jenkins pipelines and GitHub Actions workflows for streamlined CI/CD operations.</li>
-          <li>Monitored applications using Prometheus, CloudWatch, and Nagios with alert configurations.</li>
-          <li>Provisioned infrastructure using Terraform and Ansible adhering to IaC practices.</li>
-          <li>Developed Shell/Python scripts to automate system maintenance and backups.</li>
+          <li>Developed and maintained automated CI/CD pipelines using Jenkins and GitHub Actions</li>
+          <li>Monitored systems with CloudWatch, Prometheus, and Nagios</li>
+          <li>Managed AWS services like EC2, S3, IAM, VPC, and CloudFormation</li>
+          <li>Wrote Shell scripts and Python tools for automating repetitive tasks</li>
+          <li>Implemented Infrastructure as Code using Terraform and Ansible</li>
+          <li>Handled on-call duties and performed root cause analysis for incidents</li>
         </ul>
       </section>
 
       <section>
         <h2>Technical Skills</h2>
         <ul>
-          <li><strong>Cloud:</strong> AWS (EC2, S3, ELB, IAM, VPC, CloudFront, Elastic Beanstalk)</li>
-          <li><strong>DevOps:</strong> Jenkins, Docker, Kubernetes, GitHub Actions</li>
-          <li><strong>IaC & Config Mgmt:</strong> Terraform, Ansible</li>
-          <li><strong>Monitoring:</strong> CloudWatch, Nagios, Prometheus</li>
-          <li><strong>Languages:</strong> Python, Shell Scripting, C, Java, JavaScript</li>
-          <li><strong>OS:</strong> Linux, Windows</li>
+          <li><strong>Cloud & Infra:</strong> AWS (EC2, ELB, SNS, CloudFormation, S3, Auto Scaling, CloudFront)</li>
+          <li><strong>Tools:</strong> Docker, Jenkins, Kubernetes, Ansible, Terraform, Nagios</li>
+          <li><strong>Languages:</strong> Python, Shell Scripting, JavaScript, Java, C</li>
+          <li><strong>Version Control:</strong> Git, GitHub, GitLab, Bitbucket</li>
+          <li><strong>OS:</strong> Linux (CentOS, Ubuntu), Windows</li>
         </ul>
       </section>
 
       <section>
         <h2>Education</h2>
         <ul>
-          <li><strong>B.Tech (EEE)</strong> – Swami Ramananda Teertha IST, 8.4 CGPA (2021)</li>
-          <li><strong>Intermediate</strong> – Gowthami Junior College, 97.2% (2017)</li>
-          <li><strong>S.S.C</strong> – Krishnaveni Talent School, 9.8 CGPA (2015)</li>
+          <li>B.Tech in Electrical & Electronics Engineering - SRTIST (2021) - 8.4 CGPA</li>
+          <li>Intermediate - Gowthami Junior College (2017) - 97.2%</li>
+          <li>S.S.C - Krishnaveni Talent School (2015) - 9.8 CGPA</li>
         </ul>
       </section>
 
       <section>
         <h2>Strengths</h2>
         <ul>
-          <li>Ability to automate repetitive tasks and reduce deployment time.</li>
-          <li>Collaborative and communicative team player with on-call experience.</li>
-          <li>Fast learner, quickly adapts to new tools and technologies.</li>
+          <li>Quick learner and passionate about DevOps and automation</li>
+          <li>Strong collaboration and communication skills</li>
+          <li>Ability to adapt to fast-paced environments</li>
         </ul>
       </section>
 
       <section>
-        <h2>Personal Info</h2>
+        <h2>Projects</h2>
+        <div class="project-card">
+          <p><a href="https://github.com/Ruchitha829/LAMP-Auto-Deploy" target="_blank">LAMP-Auto-Deploy</a> — Automated deployment of Apache, MySQL, and PHP stack with environment configuration scripts.</p>
+        </div>
+        <div class="project-card">
+          <p><a href="https://github.com/Ruchitha829/system-monitor" target="_blank">System Resource Monitor</a> — Monitors system metrics (CPU, memory, disk) with alerts using custom Bash scripts and cron jobs.</p>
+        </div>
+        <div class="project-card">
+          <p><a href="https://github.com/Ruchitha829/user-process-tracker" target="_blank">User Process Tracker</a> — Tracks and logs currently logged-in users and their active processes in Linux systems.</p>
+        </div>
+        <div class="project-card">
+          <p><strong>AWS EC2 + Docker CI/CD Pipeline</strong> — Setup a production-grade pipeline using GitHub Actions to deploy Docker containers to AWS EC2 instances with rollback and monitoring features.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Personal Details</h2>
         <ul>
-          <li><strong>DOB:</strong> 10-09-1999</li>
-          <li><strong>Languages:</strong> English, Hindi, Telugu</li>
-          <li><strong>Location:</strong> H No: 7-13A/3, Hanuman Nagar, Chandur, Hyderabad, Telangana - 508255</li>
+          <li><strong>Date of Birth:</strong> 10-09-1999</li>
+          <li><strong>Languages Known:</strong> English, Hindi, Telugu</li>
+          <li><strong>Address:</strong> H No: 7-13A/3, Hanuman Nagar, Chandur, Hyderabad, Telangana - 508255</li>
         </ul>
       </section>
     </div>

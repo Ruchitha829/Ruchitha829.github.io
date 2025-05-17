@@ -1,174 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruchitha | DevOps Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(270deg, #f0f8ff, #e6f7ff, #d9f2e6);
-      background-size: 600% 600%;
-      animation: gradientBG 20s ease infinite;
-      color: #333;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ruchitha | DevOps Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(270deg, #d6e2f0, #f0f4f8, #d6e2f0, #f0f4f8);
+    background-size: 800% 800%;
+    animation: bgAnim 20s ease infinite;
+    color: #222;
+    line-height: 1.5;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
 
-    .container {
-      display: flex;
-      flex-direction: row;
-      padding: 30px;
-      max-width: 1200px;
-      margin: auto;
+  @keyframes bgAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .portfolio-container {
+    background: white;
+    max-width: 1100px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background: #0077b6;
+    color: white;
+    padding: 40px 30px;
+    width: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sidebar h1 {
+    margin: 0 0 20px 0;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+
+  .contact-info p, .contact-info a {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #caf0f8;
+    text-decoration: none;
+  }
+
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+  /* Right main content split in 2 columns */
+  .main-content {
+    display: flex;
+    flex: 1;
+    padding: 40px 50px;
+    gap: 40px;
+  }
+
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Section styles */
+  .section h2 {
+    font-weight: 700;
+    color: #023e8a;
+    border-bottom: 3px solid #0077b6;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+
+  ul {
+    list-style: disc inside;
+    margin-left: 0;
+    padding-left: 20px;
+    color: #03045e;
+  }
+
+  ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #03045e;
+  }
+
+  /* Projects */
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .project-item {
+    background: #caf0f8;
+    border-radius: 6px;
+    padding: 14px 20px;
+    color: #0077b6;
+    font-weight: 600;
+    box-shadow: 0 3px 8px rgba(0, 119, 182, 0.25);
+    transition: background 0.3s ease;
+    border-left: 5px solid #0077b6;
+  }
+
+  .project-item:hover {
+    background: #90e0ef;
+    cursor: pointer;
+  }
+
+  .project-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Skills progress bars */
+  .skill {
+    margin-bottom: 18px;
+  }
+
+  .skill-name {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #023e8a;
+  }
+
+  .progress-bar {
+    background: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 16px;
+  }
+
+  .progress {
+    height: 16px;
+    background: #0077b6;
+    width: 0%;
+    border-radius: 12px;
+    transition: width 1.5s ease-in-out;
+  }
+
+  /* Timeline for work experience */
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3px solid #0077b6;
+  }
+
+  .timeline-item {
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: #0077b6;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+
+  .timeline-item h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+    color: #023e8a;
+  }
+
+  .timeline-item time {
+    font-style: italic;
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  /* Certifications */
+  .certifications-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .certifications-list li {
+    background: #caf0f8;
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-left: 5px solid #0077b6;
+    font-weight: 600;
+    color: #0077b6;
+  }
+
+  /* Responsive */
+  @media(max-width: 960px) {
+    .main-content {
+      flex-direction: column;
+      padding: 30px 20px;
       gap: 30px;
     }
-
-    .left, .right {
-      flex: 1;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    .column {
+      width: 100%;
     }
-
-    .left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 15px;
+    .sidebar {
+      width: 100%;
+      padding: 20px 30px;
+      text-align: center;
     }
-
-    h1 {
-      font-size: 36px;
-      color: #0077b6;
-    }
-
-    a {
-      color: #0077b6;
-      text-decoration: none;
-    }
-
-    h2 {
-      border-bottom: 2px solid #0077b6;
-      padding-bottom: 5px;
-      margin-top: 25px;
-      font-size: 22px;
-      color: #0077b6;
-    }
-
-    ul {
-      list-style: square;
-      padding-left: 20px;
-    }
-
-    .right section {
-      margin-bottom: 20px;
-    }
-
-    .project-card {
-      background: #f9f9f9;
-      padding: 15px;
-      border-left: 5px solid #0077b6;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
-
-    .project-card a {
-      font-weight: bold;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="left">
-      <h1>RUCHITHA</h1>
-      <p><strong>Email:</strong> <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
-      <p><strong>Mobile:</strong> +91 6303476240 / +91 8340894285</p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ruchitha-r-423409274" target="_blank">linkedin.com/in/ruchitha-r-423409274</a></p>
+<div class="portfolio-container" role="main">
+
+  <aside class="sidebar" aria-label="Contact and personal information">
+    <h1>RUCHITHA</h1>
+    <div class="contact-info">
+      <p><strong>Email:</strong><br /><a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
+      <p><strong>Mobile:</strong><br />+91 6303476240 / +91 8340894285</p>
+      <p><strong>LinkedIn:</strong><br /><a href="https://www.linkedin.com/in/ruchitha-r-423409274" target="_blank" rel="noopener">linkedin.com/in/ruchitha-r-423409274</a></p>
     </div>
+  </aside>
 
-    <div class="right">
-      <section>
+  <section class="main-content">
+
+    <!-- Left column -->
+    <div class="column" aria-label="Left column content">
+      <section class="section" id="career-objective">
         <h2>Career Objective</h2>
-        <p>DevOps and Site Reliability Engineer (SRE) enthusiast with a strong foundation in cloud infrastructure, automation, and monitoring. Eager to contribute to scalable deployments and resilient systems by applying best DevOps practices and SRE principles.</p>
+        <p>Aspiring DevOps/Site Reliability Engineer (SRE) with hands-on experience in cloud infrastructure management, server monitoring, and CI/CD pipeline deployments. Skilled in AWS, Linux, Shell Scripting, and Python with practical knowledge of infrastructure automation and cloud-native tooling. Passionate about building scalable, reliable systems and reducing toil through automation.</p>
       </section>
 
-      <section>
+      <section class="section" id="work-experience">
         <h2>Work Experience</h2>
-        <p><strong>Company:</strong> OnPassive Private Limited</p>
-        <p><strong>Role:</strong> Associate Cloud Engineer</p>
-        <p><strong>Duration:</strong> July 2023 to March 2025</p>
-        <ul>
-          <li>Developed and maintained automated CI/CD pipelines using Jenkins and GitHub Actions</li>
-          <li>Monitored systems with CloudWatch, Prometheus, and Nagios</li>
-          <li>Managed AWS services like EC2, S3, IAM, VPC, and CloudFormation</li>
-          <li>Wrote Shell scripts and Python tools for automating repetitive tasks</li>
-          <li>Implemented Infrastructure as Code using Terraform and Ansible</li>
-          <li>Handled on-call duties and performed root cause analysis for incidents</li>
-        </ul>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Associate Cloud Engineer, OnPassive Private Limited</h3>
+            <time>July 2023 – March 2025</time>
+            <ul>
+              <li>Designed and maintained CI/CD pipelines using Jenkins, Git, and GitHub Actions.</li>
+              <li>Monitored server & app performance via CloudWatch, Nagios, and Prometheus.</li>
+              <li>Managed AWS infrastructure (EC2, S3, IAM, VPC, CloudFormation).</li>
+              <li>Automated server provisioning and maintenance using Shell scripting & Python.</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h2>Technical Skills</h2>
-        <ul>
-          <li><strong>Cloud & Infra:</strong> AWS (EC2, ELB, SNS, CloudFormation, S3, Auto Scaling, CloudFront)</li>
-          <li><strong>Tools:</strong> Docker, Jenkins, Kubernetes, Ansible, Terraform, Nagios</li>
-          <li><strong>Languages:</strong> Python, Shell Scripting, JavaScript, Java, C</li>
-          <li><strong>Version Control:</strong> Git, GitHub, GitLab, Bitbucket</li>
-          <li><strong>OS:</strong> Linux (CentOS, Ubuntu), Windows</li>
-        </ul>
-      </section>
-
-      <section>
+      <section class="section" id="education">
         <h2>Education</h2>
         <ul>
-          <li>B.Tech in Electrical & Electronics Engineering - SRTIST (2021) - 8.4 CGPA</li>
-          <li>Intermediate - Gowthami Junior College (2017) - 97.2%</li>
-          <li>S.S.C - Krishnaveni Talent School (2015) - 9.8 CGPA</li>
+          <li>B.Tech (EEE) - Swami Ramananda Teertha Institute of Science and Technology, 8.4 CGPA (2021)</li>
+          <li>Intermediate - Gowthami Junior College, 97.2% (2017)</li>
+          <li>S.S.C - Krishnaveni Talent School, 9.8 CGPA (2015)</li>
         </ul>
       </section>
 
-      <section>
+      <section class="section" id="strengths">
         <h2>Strengths</h2>
         <ul>
-          <li>Quick learner and passionate about DevOps and automation</li>
-          <li>Strong collaboration and communication skills</li>
-          <li>Ability to adapt to fast-paced environments</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Projects</h2>
-        <div class="project-card">
-          <p><a href="https://github.com/Ruchitha829/LAMP-Auto-Deploy" target="_blank">LAMP-Auto-Deploy</a> — Automated deployment of Apache, MySQL, and PHP stack with environment configuration scripts.</p>
-        </div>
-        <div class="project-card">
-          <p><a href="https://github.com/Ruchitha829/system-monitor" target="_blank">System Resource Monitor</a> — Monitors system metrics (CPU, memory, disk) with alerts using custom Bash scripts and cron jobs.</p>
-        </div>
-        <div class="project-card">
-          <p><a href="https://github.com/Ruchitha829/user-process-tracker" target="_blank">User Process Tracker</a> — Tracks and logs currently logged-in users and their active processes in Linux systems.</p>
-        </div>
-        <div class="project-card">
-          <p><strong>AWS EC2 + Docker CI/CD Pipeline</strong> — Setup a production-grade pipeline using GitHub Actions to deploy Docker containers to AWS EC2 instances with rollback and monitoring features.</p>
-        </div>
-      </section>
-
-      <section>
-        <h2>Personal Details</h2>
-        <ul>
-          <li><strong>Date of Birth:</strong> 10-09-1999</li>
-          <li><strong>Languages Known:</strong> English, Hindi, Telugu</li>
-          <li><strong>Address:</strong> H No: 7-13A/3, Hanuman Nagar, Chandur, Hyderabad, Telangana - 508255</li>
+          <li>Strong communication and interpersonal skills</li>
+          <li>Fast learner and adaptive to new technologies</li>
+          <li>Team player with excellent problem-solving abilities</li>
         </ul>
       </section>
     </div>
-  </div>
-</body>
-</html>
+
+    <!-- Right column -->
+    <div class="column" aria-label="Right column content">
+      <section class="section" id="technical-skills">
+        <h2>Technical Skills</h2>
+        <div class="skill">
+          <div class="skill-name">AWS (EC2, S3, CloudFormation, etc.)</div>
+          <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">DevOps Tools (Docker, Jenkins, Kubernetes)</div>
+          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Version Control (Git, GitHub)</div>
+          <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Programming (Python, Shell

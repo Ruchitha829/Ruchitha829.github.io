@@ -15,14 +15,37 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0f172a;
-      color: #f1f5f9;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f8fafc;
       display: flex;
       min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: floatBG 30s linear infinite;
+      z-index: 0;
+      opacity: 0.2;
+    }
+
+    @keyframes floatBG {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+
+    aside, main {
+      position: relative;
+      z-index: 1;
     }
 
     aside {
-      background: url('images/devops-bg.jpg') no-repeat center center/cover;
+      background-color: #1a1a2e;
       width: 30%;
       padding: 2rem;
       display: flex;
@@ -30,19 +53,18 @@
       justify-content: flex-start;
       align-items: center;
       text-align: left;
-      color: #f8fafc;
+      color: #f1f5f9;
     }
 
     .profile {
-      background-color: rgba(15, 23, 42, 0.8);
       padding: 1.5rem;
       border-radius: 10px;
       width: 100%;
     }
 
     .profile h1 {
-      font-size: 2rem;
-      color: #38bdf8;
+      font-size: 2.2rem;
+      color: #00d1b2;
       margin-bottom: 1rem;
     }
 
@@ -53,21 +75,22 @@
     .contact-info strong {
       display: inline-block;
       width: 90px;
-      color: #94a3b8;
+      color: #cbd5e1;
     }
 
     aside a {
-      color: #38bdf8;
+      color: #00d1b2;
       text-decoration: none;
     }
 
     main {
       width: 70%;
       padding: 2rem;
+      background-color: #16213e;
     }
 
     h2 {
-      color: #38bdf8;
+      color: #00d1b2;
       margin-bottom: 1rem;
       border-bottom: 1px solid #334155;
       padding-bottom: 0.5rem;
@@ -83,7 +106,7 @@
     }
 
     .project {
-      background: #1e293b;
+      background: #0f3460;
       padding: 1rem;
       border-radius: 8px;
       margin-bottom: 1rem;

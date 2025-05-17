@@ -1,173 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ruchitha's Portfolio</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #1e1e2f;
-    color: #eee;
-    margin: 0; padding: 0;
-  }
-  header {
-    text-align: center;
-    padding: 40px 20px 20px;
-    background: linear-gradient(135deg, #ff6f61, #ff3b2f);
-    box-shadow: 0 4px 10px #ff3b2f99;
-  }
-  .profile-pic {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 0 20px #fff5;
-  }
-  header h1 {
-    margin: 15px 0 5px;
-    font-size: 2.8rem;
-    letter-spacing: 2px;
-  }
-  header p {
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: #ffd2cc;
-  }
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  section {
-    margin-bottom: 40px;
-  }
-  h2 {
-    border-left: 6px solid #ff3b2f;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #ff6f61;
-  }
-  .card {
-    background: #29293d;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 0 15px #ff3b2f55;
-    margin-bottom: 20px;
-  }
-  .project-card-content {
-    display: flex;
-    align-items: center;
-  }
-  .project-img {
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
-    object-fit: contain;
-    margin-right: 20px;
-    box-shadow: 0 0 10px #ff6f6133;
-    border: 2px solid #ff3b2f88;
-    background: #fff;
-    padding: 10px;
-  }
-  a {
-    color: #ffb1a1;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  ul {
-    padding-left: 20px;
-    line-height: 1.6;
-  }
-  footer {
-    text-align: center;
-    padding: 15px 0;
-    background: #111;
-    color: #555;
-    font-size: 0.9rem;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruchitha's Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #4b6cb7; /* blue gradient */
+      background: linear-gradient(135deg, #4b6cb7, #182848);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(75, 108, 183, 0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #d1d9ff;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #4b6cb7;
+      border-bottom: 3px solid #4b6cb7;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill {
+      background: #182848;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 0 8px #4b6cb7;
+      transition: background 0.3s ease;
+    }
+    .skill:hover {
+      background: #4b6cb7;
+      cursor: default;
+    }
+    .projects ul {
+      padding-left: 0;
+    }
+    .projects li {
+      background: #e7ecff;
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgb(75 108 183 / 0.2);
+      font-weight: 600;
+    }
+    footer {
+      background: #182848;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.95rem;
+      margin-top: 40px;
+      letter-spacing: 0.7px;
+    }
+    footer a {
+      color: #4b6cb7;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <img src="images/profile.jpg" alt="Ruchitha's Photo" />
+    <h1>Ruchitha Katakam</h1>
+    <p>Linux Admin | AWS | DevOps | SRE | Junior Admin | Python | SQL</p>
+  </header>
 
-<header>
-  <img src="https://img.icons8.com/color/144/000000/user-male-circle--v2.png" alt="Ruchitha Profile" class="profile-pic" />
-  <h1>Ruchitha</h1>
-  <p>Linux Admin | AWS | DevOps Engineer | SRE Aspirant</p>
-</header>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Experienced Associate Cloud Engineer with hands-on skills in server monitoring, application deployment, and cloud infrastructure management. Completed comprehensive courses in Linux administration and AWS. Passionate about Linux system administration, DevOps practices, cloud computing, and site reliability engineering. Open to junior roles in Linux administration, AWS, DevOps, and SRE domains where I can apply my technical skills and continue growing professionally.
+      </p>
+    </section>
 
-<main>
-  <section>
-    <h2>About Me</h2>
-    <p>Experienced Associate Cloud Engineer at Onpassive where I monitored servers and managed basic application deployments. Passionate about Linux system administration, AWS cloud services, and DevOps automation.</p>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Linux Administration</li>
-      <li>SQL & Database Management</li>
-      <li>Python Scripting</li>
-      <li>AWS Cloud (Certified Cloud Practitioner)</li>
-      <li>DevOps Tools: Docker, Kubernetes, Jenkins, CI/CD Pipelines</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Certifications & Courses</h2>
-    <ul>
-      <li>Udemy Linux Administration Course (Completed)</li>
-      <li>AWS Certified Cloud Practitioner</li>
-      <li>Various DevOps & CI/CD Courses on Udemy</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-
-    <div class="card">
-      <div class="project-card-content">
-        <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-lamp-web-development-flaticons-lineal-color-flat-icons.png" alt="LAMP Stack Project" class="project-img" />
-        <div>
-          <h3>🚀 LAMP Stack Auto Deployment (CentOS 9)</h3>
-          <p>Automated deployment of LAMP stack using Bash scripting, including Apache, MariaDB, PHP setup with security hardening and sample PHP page.</p>
-          <p><a href="https://github.com/Ruchitha829/linux-projects/tree/main/LAMP-Auto-Deploy" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
-        </div>
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <span class="skill">Linux Administration</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Python</span>
+        <span class="skill">AWS</span>
+        <span class="skill">Docker</span>
+        <span class="skill">Kubernetes</span>
+        <span class="skill">Jenkins</span>
+        <span class="skill">CI/CD Pipelines</span>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <div class="project-card-content">
-        <img src="https://img.icons8.com/color/64/000000/monitor.png" alt="System Monitor Project" class="project-img" />
-        <div>
-          <h3>🖥️ Linux System Resource Monitor</h3>
-          <p>Bash script to monitor CPU, memory, and disk usage with alerts to ensure server health and uptime.</p>
-          <p><a href="https://github.com/Ruchitha829/linux-projects/tree/main/system-monitor" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
-        </div>
-      </div>
-    </div>
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <ul>
+        <li>
+          <strong>Associate Cloud Engineer at OnPassive</strong><br />
+          Responsible for monitoring server health, managing basic application deployments, and supporting cloud infrastructure operations.
+        </li>
+      </ul>
+    </section>
 
-    <div class="card">
-      <div class="project-card-content">
-        <img src="https://img.icons8.com/color/64/000000/user-group-man-man.png" alt="User Process Tracker Project" class="project-img" />
-        <div>
-          <h3>👤 User & Process Tracker</h3>
-          <p>Tool to monitor logged-in users and their running processes for Linux servers to aid system auditing and troubleshooting.</p>
-          <p><a href="https://github.com/Ruchitha829/linux-projects/tree/main/user-process-tracker" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+    <section id="education-certifications">
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li>Completed AWS Certified Solutions Architect course</li>
+        <li>Completed Linux Administration course on Udemy</li>
+      </ul>
+    </section>
 
-<footer>
-  &copy; 2025 Ruchitha — Contact: <a href="mailto:ruchitha@example.com" style="color:#ff6f61;">ruchitha@example.com</a>
-</footer>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>LAMP-Auto-Deploy:</strong> Automated deployment script for LAMP stack (Linux, Apache, MariaDB, PHP) on CentOS 9.</li>
+        <li><strong>System Monitor:</strong> Bash script to monitor system resources such as CPU, memory, and disk usage.</li>
+        <li><strong>User Process Tracker:</strong> Tool to track logged-in users and their active processes on Linux servers.</li>
+      </ul>
+    </section>
+  </main>
 
+  <footer>
+    &copy; 2025 Ruchitha &nbsp; | &nbsp; Email: <a href="mailto:ruchithakatakam99@gmail.com">ruchithakatakam99@gmail.com</a>
+  </footer>
 </body>
 </html>

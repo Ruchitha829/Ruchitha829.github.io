@@ -2,98 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ruchitha | DevOps & SRE Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruchitha | DevOps Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #f8fafc;
       display: flex;
-      min-height: 100vh;
-      overflow-x: hidden;
-      position: relative;
+      height: 100vh;
+      color: #000;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      overflow: hidden;
     }
 
-    body::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/stardust.png');
-      animation: floatBG 30s linear infinite;
-      z-index: 0;
-      opacity: 0.2;
-    }
-
-    @keyframes floatBG {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 1000px; }
-    }
-
-    aside, main {
-      position: relative;
-      z-index: 1;
-    }
-
-    aside {
-      background-color: #1a1a2e;
+    .left-panel {
       width: 30%;
+      background-color: #b3e5fc;
       padding: 2rem;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      text-align: left;
-      color: #f1f5f9;
+      justify-content: center;
+      gap: 1rem;
     }
 
-    .profile {
-      padding: 1.5rem;
-      border-radius: 10px;
-      width: 100%;
-    }
-
-    .profile h1 {
+    .left-panel h1 {
       font-size: 2.2rem;
-      color: #00d1b2;
+      color: #01579b;
+    }
+
+    .left-panel p {
+      font-size: 1rem;
+      line-height: 1.5;
       margin-bottom: 1rem;
     }
 
-    .contact-info p {
-      margin-bottom: 0.8rem;
+    .left-panel .contact {
+      margin-top: 2rem;
     }
 
-    .contact-info strong {
-      display: inline-block;
-      width: 90px;
-      color: #cbd5e1;
+    .left-panel .contact p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
     }
 
-    aside a {
-      color: #00d1b2;
-      text-decoration: none;
-    }
-
-    main {
+    .right-panel {
       width: 70%;
       padding: 2rem;
-      background-color: #16213e;
+      overflow-y: auto;
     }
 
     h2 {
-      color: #00d1b2;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 0.5rem;
+      color: #0277bd;
+      margin-bottom: 0.5rem;
     }
 
     section {
@@ -101,115 +68,93 @@
     }
 
     ul {
-      list-style: disc;
-      margin-left: 1.5rem;
+      padding-left: 1.2rem;
     }
 
-    .project {
-      background: #0f3460;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    img.project-img {
+    .project-image {
       width: 100%;
-      border-radius: 6px;
+      max-width: 600px;
       margin-top: 0.5rem;
+      border-radius: 8px;
     }
   </style>
 </head>
 
 <body>
-  <aside>
-    <div class="profile">
-      <h1>Ruchitha</h1>
-      <p><strong>Role:</strong> DevOps & SRE Enthusiast</p>
-      <div class="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:ruchithakatakm99@gmail.com">ruchithakatakm99@gmail.com</a></p>
-        <p><strong>Phone:</strong> +91 6303476240 / +91 8340894285</p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ruchitha-r-423409274">ruchitha-r</a></p>
-        <p><strong>Location:</strong> Hyderabad, Telangana</p>
-        <p><strong>Languages:</strong> English, Hindi, Telugu</p>
-        <p><strong>DOB:</strong> 10-Sep-1999</p>
-      </div>
+  <div class="left-panel">
+    <h1>Ruchitha R.</h1>
+    <p>DevOps & Site Reliability Enthusiast</p>
+    <p><strong>Career Objective:</strong><br />
+      Aspiring DevOps/SRE Engineer with hands-on experience in cloud infrastructure, monitoring, and CI/CD. Proficient in AWS, Linux, Python, and automation scripting. Focused on building scalable, reliable systems.
+    </p>
+    <p><strong>Strengths:</strong><br />
+      - Strong communication and inter-team collaboration<br />
+      - Quick adaptability to new tech environments<br />
+      - Passion for learning and process optimization<br />
+      - Enthusiastic team player and problem solver
+    </p>
+    <div class="contact">
+      <p><i class="fas fa-envelope"></i> ruchithakatakm99@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91 6303476240 | +91 8340894285</p>
+      <p><i class="fab fa-linkedin"></i> linkedin.com/in/ruchitha-r-423409274</p>
     </div>
-  </aside>
+  </div>
 
-  <main>
-    <section>
-      <h2>Career Objective</h2>
-      <p>Aspiring DevOps/Site Reliability Engineer with hands-on experience in cloud infrastructure, server monitoring, and CI/CD pipeline deployment. Proficient in AWS, Linux, Shell Scripting, and Python with strong skills in automation, observability, and reliable deployment practices. Passionate about reducing toil and building scalable systems using SRE principles.</p>
-    </section>
-
+  <div class="right-panel">
     <section>
       <h2>Work Experience</h2>
-      <p><strong>Company:</strong> OnPassive Private Limited</p>
-      <p><strong>Role:</strong> Associate Cloud Engineer</p>
-      <p><strong>Duration:</strong> July 2023 – Present</p>
+      <p><strong>Associate Cloud Engineer</strong> – OnPassive Private Limited<br />
+        <em>July 2023 – Present</em></p>
       <ul>
-        <li>Designed CI/CD pipelines using Jenkins and GitHub Actions for automated workflows.</li>
-        <li>Monitored servers using CloudWatch, Nagios, and Prometheus; set up alerts and logs.</li>
-        <li>Managed AWS resources including EC2, S3, IAM, VPC, and CloudFormation.</li>
-        <li>Automated provisioning and config tasks using Shell Scripting and Python.</li>
-        <li>Implemented IaC using Terraform and Ansible for scalable deployments.</li>
-        <li>Collaborated on DevOps integration into Agile SDLC and supported on-call rotations.</li>
-        <li>Performed root cause analysis and improved incident resolution strategies.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Cloud:</strong> AWS (EC2, S3, ELB, SNS, CloudFormation, CloudFront, Elastic Beanstalk)</li>
-        <li><strong>DevOps Tools:</strong> Jenkins, Docker, Kubernetes</li>
-        <li><strong>Monitoring:</strong> Nagios, Prometheus, CloudWatch</li>
-        <li><strong>Automation:</strong> Terraform, Ansible, Shell Scripting, Python</li>
-        <li><strong>Version Control:</strong> Git, GitHub, GitLab, Bitbucket</li>
-        <li><strong>Build Tools:</strong> Maven</li>
-        <li><strong>Languages:</strong> Python, C, Java, JavaScript</li>
-        <li><strong>OS:</strong> Linux, Windows</li>
+        <li>Designed CI/CD pipelines with Jenkins, GitHub Actions</li>
+        <li>Monitored servers using CloudWatch, Prometheus, Nagios</li>
+        <li>Managed AWS infrastructure (EC2, S3, IAM, CloudFormation)</li>
+        <li>Automated tasks with Shell scripting and Python</li>
+        <li>Provisioned infra with Terraform and Ansible (IaC)</li>
+        <li>Collaborated with Dev teams to support Agile/DevOps culture</li>
+        <li>On-call support, RCA, MTTR improvement, documentation</li>
       </ul>
     </section>
 
     <section>
       <h2>Projects</h2>
-      <div class="project">
-        <h3>LAMP Auto Deployment</h3>
-        <p>Automated LAMP stack deployment using Ansible, integrated CI/CD via GitHub, added SSL support. Demonstrates skills in automation, orchestration, and cloud hosting.</p>
-        <img src="images/lamp.png" alt="LAMP Project" class="project-img">
-      </div>
-      <div class="project">
-        <h3>Linux System Resource Monitor</h3>
-        <p>Bash and Prometheus-based monitor with Grafana dashboards for system health visibility. Includes alerts for resource thresholds.</p>
-        <img src="images/system-monitor.png" alt="System Monitor" class="project-img">
-      </div>
-      <div class="project">
-        <h3>User Process Tracker</h3>
-        <p>Linux script to log users and processes, useful for system audits and resource tracking. Supports report generation and filtering.</p>
-        <img src="images/user-tracker.png" alt="User Tracker" class="project-img">
-      </div>
+      <p><strong>LAMP-Auto-Deploy</strong><br />
+        Automated LAMP stack deployment using Ansible and Shell scripting.</p>
+      <img src="images/lamp.png" class="project-image" alt="LAMP Project">
+
+      <p><strong>System Monitor</strong><br />
+        Real-time monitoring of CPU, RAM, disk usage. Alerts via script triggers.</p>
+      <img src="images/system-monitor.png" class="project-image" alt="System Monitor">
+
+      <p><strong>User Process Tracker</strong><br />
+        Shell script to track and log logged-in users with processes in use.</p>
+      <img src="images/user-tracker.png" class="project-image" alt="User Tracker">
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Cloud:</strong> AWS (EC2, S3, IAM, VPC, CloudFront, CloudFormation)</li>
+        <li><strong>DevOps Tools:</strong> Docker, Jenkins, Kubernetes</li>
+        <li><strong>IaC:</strong> Terraform, Ansible</li>
+        <li><strong>Monitoring:</strong> Prometheus, Nagios, CloudWatch</li>
+        <li><strong>Scripting:</strong> Shell, Python</li>
+        <li><strong>VCS:</strong> Git, GitHub, GitLab, Bitbucket</li>
+        <li><strong>CI/CD:</strong> Jenkins, GitHub Actions</li>
+        <li><strong>OS:</strong> Linux (CentOS), Windows</li>
+      </ul>
     </section>
 
     <section>
       <h2>Education</h2>
-      <ul>
-        <li><strong>B.Tech - EEE</strong>, Swami Ramananda Teertha Institute of Science and Technology, 2021, CGPA: 8.4</li>
-        <li><strong>Intermediate</strong>, Gowthami Junior College, 2017, 97.2%</li>
-        <li><strong>SSC</strong>, Krishnaveni Talent School, 2015, 9.8 CGPA</li>
-      </ul>
+      <p><strong>B.Tech in EEE</strong><br />
+        Swami Ramananda Teertha Institute of Science & Technology – 8.4 CGPA (2021)</p>
+      <p><strong>Intermediate</strong><br />
+        Gowthami Junior College – 97.2% (2017)</p>
+      <p><strong>SSC</strong><br />
+        Krishnaveni Talent School – 9.8 CGPA (2015)</p>
     </section>
-
-    <section>
-      <h2>Strengths</h2>
-      <ul>
-        <li>Strong communication and teamwork abilities</li>
-        <li>Fast learner and adaptable to new environments</li>
-        <li>Proactive in learning new technologies and solving problems</li>
-      </ul>
-    </section>
-  </main>
-
+  </div>
 </body>
 
 </html>
